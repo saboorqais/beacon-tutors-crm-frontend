@@ -4,10 +4,8 @@ import styles from './Nav.module.css';
 import { ReactComponent as Logo } from '../../assets/beacon-tutors.svg';
 
 
-export default function AdminNav() {
+export default function Nav() {
   
-
-
   return (
     <>
       <div
