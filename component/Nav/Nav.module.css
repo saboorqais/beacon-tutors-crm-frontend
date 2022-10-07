@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% - 40px);
+    width: calc(100%);
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -122,7 +122,7 @@
   
     .nav {
       padding: 0 14px;
-      width: calc(100% - 30px);
+      width: calc(100% );
     }
   
     .buttons {
