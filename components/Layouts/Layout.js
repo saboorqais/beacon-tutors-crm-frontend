@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import dynamic from 'next/dynamic';
 import Nav from '../Nav/Nav';
 import {SidePanelList} from "../SidePanelList";
@@ -6,15 +6,13 @@ import Link from "next/link";
 import {useRouter} from "next/router";
 
 export default function Layout({children}) {
+    const router = useRouter();
 
     const Pattern = dynamic(() =>
-        import('../../assets/backgroundpattern.svg').then(
+        import('../../assets/backgroundPattern.svg').then(
             (module) => module.ReactComponent
         )
     );
-
-    const router = useRouter();
-
 
     const rawInquiry = [
         {
@@ -130,6 +128,7 @@ export default function Layout({children}) {
         </div>
         <Nav/>
             <div className={"pageLayout"} >
+                {!(router.asPath === "/signin") &&
             <aside>
             <ul>
                 <li>
@@ -161,6 +160,7 @@ export default function Layout({children}) {
                 </li>
             </ul>
             </aside>
+                }
                 <main>{children}</main>
             </div>
 
