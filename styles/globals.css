@@ -1,9 +1,42 @@
-html,
-body {
+html{
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  position: relative;
+  height: fit-content;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  position: inherit;
+  height: inherit;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+body > * {
+  overflow-x: hidden;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+input,
+textarea,
+select {
+  font-family: 'Poppins', sans-serif;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
 }
 
 a {
@@ -15,26 +48,214 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
+/*@media (prefers-color-scheme: dark) {*/
+/*  html {*/
+/*    color-scheme: dark;*/
+/*  }*/
+/*  body {*/
+/*    color: white;*/
+/*    background: black;*/
+/*  }*/
+/*}*/
 
 .background {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: #f3faff;
+  background-color: #ffffff;
 }
 .background > * {
   position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0.15;
+}
+
+/* Admin panel global styles */
+
+.adminHeading {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #3d6b98;
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0 4px 40px rgba(93, 143, 193, 0.2);
+  padding: 1.5rem;
+  margin: 3rem auto;
+}
+
+.adminHeading br {
+  display: none;
+}
+
+.adminSection {
+  margin: 0;
+}
+
+.adminList {
+  margin: 3.65rem 15%;
+  background-color: #ffffffff;
+  border-radius: 1rem;
+  /* padding: 0.5rem 1rem; */
+  border: 0.25rem solid #a1bedb;
+  max-height: 40rem;
+  overflow-y: auto;
+  box-shadow: 0 4px 40px rgba(225, 221, 212, 0.25);
+}
+
+.adminListBig {
+  margin: 3.65rem 10%;
+  max-height: 45rem;
+}
+
+.adminCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 0.6rem;
+  margin: 0.75rem 0;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 4px 20px rgba(93, 143, 193, 0.25);
+}
+
+.adminInput {
+  box-sizing: border-box;
+  padding: 0.75rem 1.5rem;
+  margin: 0.65rem 0;
+  border-radius: 20rem;
+  width: 100%;
+  font-size: 1rem;
+  border: 2px solid rgba(23, 36, 58, 0.25);
+  color: rgba(23, 36, 58);
+  caret-color: rgba(23, 36, 58);
+  transition: 0.3s;
+}
+
+.adminInput::placeholder {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(23, 36, 58, 0.25);
+}
+
+.adminInput:active,
+.adminInput:focus,
+.adminInput:focus-visible {
+  outline: none;
+  border-color: #101928;
+  box-shadow: 0 4px 20px rgba(16, 25, 41, 0.1);
+}
+
+.adminButton {
+  background: #101928;
+  color: white;
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding: 0.75rem 0;
+  margin: 0.65rem 0;
+  border: none;
+  border-radius: 20rem;
+  width: 100%;
+}
+
+.adminButton:hover {
+  background-color: #17243A;
+}
+
+.adminButton:active,
+.adminButton:focus {
+  background-color: #1f3253;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.toggle span {
+  margin-right: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #101928;
+}
+
+.react-switch {
+  box-shadow: 0 1px 15px rgba(225, 221, 212, 0.25);
+  font-weight: 500;
+}
+
+.react-switch-handle {
+  top: 0.315rem !important;
+  left: 0.25rem !important;
+  height: 2rem !important;
+  width: 2rem !important;
+}
+
+.icons {
+  display: flex;
+  margin-top: -0.2rem;
+}
+
+.icons > *:not(p) {
+  margin: 0 1px;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.editIcon:hover,
+.trashIcon:hover {
+  border-radius: 25%;
+  transition: background-color 0.3s;
+}
+
+.editIcon:hover {
+  background-color: rgba(79, 195, 177, 0.25);
+}
+
+.editIcon:active {
+  background-color: rgba(79, 195, 177, 0.5);
+}
+
+.trashIcon:hover {
+  background-color: rgba(255, 111, 102, 0.25);
+}
+
+.trashIcon:active {
+  background-color: rgba(255, 111, 102, 0.5);
+}
+
+.noRecords {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: #101928;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+button:disabled,
+.disabled {
+  pointer-events: none;
+}
+
+button:disabled {
+  opacity: 0.85;
+  transition: opacity 0.3s;
 }
