@@ -28,6 +28,17 @@ button {
   font-family: 'Poppins', sans-serif;
 }
 
+.pageLayout{
+  display: flex;
+  margin-top: 55px;
+}
+
+/*temporary for showing selected item in side panel*/
+.selected{
+  background: black;
+  color: white;
+}
+
 input,
 textarea,
 select {
