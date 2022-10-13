@@ -7,7 +7,9 @@ function MyApp({Component, pageProps}) {
 
     return getLayout(
         <>
+
         <Toaster
+
             position = "bottom-right"
             containerStyle = {{
                 zIndex: "10000001",

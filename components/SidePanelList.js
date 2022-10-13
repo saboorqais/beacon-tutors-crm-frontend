@@ -1,26 +1,38 @@
 import {useRouter} from "next/router";
 import Link from "next/link";
 import React from "react";
-
+import {  Folder, ChevronDown,  } from "lucide-react";
 export function SidePanelList(props) {
 
     const router = useRouter();
 
     return <>
-                <h5>{props.sectionName}</h5>
-                <ul>
+                <div
+                        className="DropdownSidebar">
+                        <div className="IconSectionSidebar">
+                          <Folder size={30} />
+                        </div>
+                        <div className="LabelSectionSidebar">{props.sectionName}</div>
+                        <div className="DropDownSideBarArrow">
+                          <ChevronDown size={30} />
+                        </div>
+                      </div>
+                      <div className={"DropdownItems " }>
                     {props.rawInquiry.map(({href, title}) => (
-                        <li key = {title}>
-                        <Link href = {href}>
-                        <a
-                            className = {router.asPath === href && 'selected'}
-                        >
-                    {title}
-                        </a>
-                        </Link>
-                        </li>
+                       <>
+                            
+                            <div style={{ display: "flex" }}>
+                              <div className="IconSectionSidebar">
+                                <Folder size={30} />
+                              </div>
+                              <div className="LabelSectionSidebar">{title}</div>
+                            
+                            </div>
+                           
+                          </>
                     ))}
-                </ul>
+                    </div>
+                
 
         </>
         ;

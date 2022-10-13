@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mantine/core": "^5.5.5",
     "@next/bundle-analyzer": "^12.3.1",
     "@svgr/webpack": "^6.4.0",
+    "@tabler/icons": "^1.103.0",
     "bundle-analyzer": "^0.0.6",
     "firebase": "^9.11.0",
     "lucide-react": "^0.91.0",
