@@ -9,7 +9,16 @@ function SideBarMenu(props) {
         props.action ? styles.Action : " "
       }`}
     >
-      <div className={styles.ChevronsLeft}>{props.icon}</div>
+      <div
+        className={styles.ChevronsLeft}
+        onClick={() => {
+          if (props.open) {
+            props.open(true);
+          }
+        }}
+      >
+        {props.icon}
+      </div>
       <div className={styles.CollapseText}>{props.title}</div>
     </div>
   );
