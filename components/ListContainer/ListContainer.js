@@ -123,8 +123,9 @@ function ListContainer() {
          <Link href={"/funded"}>
         <a className={router.asPath === "/funded" && "selected"}>Funded</a>
       </Link>
-      {AllList.map((item) => (
-        <SidePanelList rawInquiry={item[0]} sectionName={item[1]} />
+      {AllList.map((item,key) => (
+        
+        <SidePanelList rawInquiry={item[0]} sectionName={item[1]} key={key} />
       ))}
      
     </div>

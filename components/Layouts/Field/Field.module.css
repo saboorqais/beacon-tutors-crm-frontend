@@ -1,0 +1,94 @@
+.Field{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+position: relative;
+margin-top: 25px;
+margin-left: 10px;
+margin-right: 10px;
+flex: 0 0 30.333333%;
+background: #FFFFFF;
+box-shadow: 0px 4px 20px rgba(143, 143, 143, 0.25);
+border-radius: 8px;
+
+}
+.Heading{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 33px;
+/* identical to box height */
+
+
+color: #3A3A3B;
+}
+.Date{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    display: flex;
+    width: 100%;
+   justify-content: space-between;
+    
+    color: #A0A0A1;
+}
+.newLabel{
+    position: absolute;
+width: 12.5px;
+height: 12.5px;
+right: 23.91px;
+top: 10px;
+
+}
+.IconWrapperDate{
+    color: #F18B97;
+    display:flex;
+  justify-content: flex-end;
+  width: fit-content;
+}
+.FieldButton{
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    justify-content: space-between;
+}
+.FieldButtonContainer{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   display: flex;
+
+   height: 25px;
+
+background: rgba(160, 160, 161, 0.1);
+border: 2px solid rgba(160, 160, 161, 0.4);
+border-radius: 50px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 21px;
+color: #A0A0A1;
+}
+.MarginLeft12{
+    margin-left: 12px;
+}
+.MarginRight12{
+    margin-right: 12px;
+}
+
+.BottomContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10px;
+}
+.BottomIconWrapper{
+    margin-left: 10px;
+}

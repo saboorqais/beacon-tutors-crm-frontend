@@ -1,4 +1,6 @@
 import React from "react";
+import FieldContainer from "../Layouts/FieldContainer/FieldContainer";
+import PaginationPage from "../Layouts/Pagination/PaginationPage";
 
 function MainContainer() {
   return (
@@ -17,6 +19,10 @@ function MainContainer() {
           <div className="IndividualTab ">Client Reviewing</div>
         </div>
       </div>
+      <FieldContainer/>
+
+  
+    
     </div>
   );
 }

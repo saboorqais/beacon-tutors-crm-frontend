@@ -9,17 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "@mantine/core": "^5.5.5",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.10",
     "@next/bundle-analyzer": "^12.3.1",
+    "@reduxjs/toolkit": "^1.8.6",
     "@svgr/webpack": "^6.4.0",
     "@tabler/icons": "^1.103.0",
     "bundle-analyzer": "^0.0.6",
     "firebase": "^9.11.0",
     "lucide-react": "^0.91.0",
     "next": "12.3.0",
+    "next-redux-wrapper": "^8.0.0",
     "react": "18.2.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
+    "react-paginate": "^8.1.3",
+    "sass": "^1.55.0",
     "url-loader": "^4.1.1"
   },
   "devDependencies": {

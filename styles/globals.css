@@ -290,7 +290,7 @@ button:disabled {
 
 
 .IconSectionSidebar{
-margin:22.5px
+margin :22.5px
 }
 .LabelSectionSidebar{
   font-family: 'Poppins';
@@ -306,6 +306,8 @@ margin:22.5px
   display: flex;
   align-items: center;
   transition: .3s ease-in;
+  background-color: #01121C;
+  cursor: pointer;
 }
 .DropDownSideBarArrow
 {
@@ -315,7 +317,6 @@ margin:22.5px
 }
 .DropdownItems{
   transform-origin: top center;
-  
  position: relative;
   margin-top: 0px;
   background-color: #17243A;
@@ -324,8 +325,10 @@ margin:22.5px
   margin-right: 11px;
 }
 .displayOFF{
- transform: scaleY(0);
-}
+
+  display: none;
+  
+  }
 .displayON{
 display: block;
   transform: scaleY(1);
@@ -463,3 +466,5 @@ align-items: center;
 text-align: center;
 border: 2px solid rgba(23, 36, 58, 0.25);
 }
+
+

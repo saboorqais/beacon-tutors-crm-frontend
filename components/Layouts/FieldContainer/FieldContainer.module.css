@@ -1,0 +1,19 @@
+.Container{
+
+
+width: 100%;
+
+
+}
+.InnerContainer{
+display: flex;
+flex-wrap: wrap;
+border-radius: 10px;
+margin: 25px;
+background: #C8D7F4;
+max-height: 595px;
+padding-bottom: 25px;
+justify-content: center;
+
+
+}

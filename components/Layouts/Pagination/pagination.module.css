@@ -1,0 +1,5 @@
+.Paginate{
+    display: flex;
+    background-color: blanchedalmond;
+    flex-direction: row;
+}
