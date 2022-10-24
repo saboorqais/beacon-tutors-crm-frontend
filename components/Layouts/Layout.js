@@ -15,38 +15,64 @@ import {
 import MainContainer from "../MainContainer/MainContainer";
 import SideBarMenu from "../SideBarMenu/SideBarMenu";
 import ListContainer from "../ListContainer/ListContainer";
-import FieldContainer from "./FieldContainer/FieldContainer";
+import { useDispatch, useSelector } from "react-redux";
+import { selectCloseSlice, selectCloseState,setCloseState } from "../Reducers/CloseState";
+import { width } from "@mui/system";
 export default function Layout({ children }) {
   const router = useRouter();
-  const [dropdownState, setdropdownState] = useState("displayOFF");
   const Pattern = dynamic(() =>
     import("../../assets/backgroundPattern.svg").then(
       (module) => module.ReactComponent
     )
   );
+  const CloseState = useSelector(selectCloseState);
+  const dispatch = useDispatch();
 
   return (
     <div className="mainContainer">
       <div className="SiderbarFlex">
         {!(router.asPath === "/signin") && (
-          <aside className="sidebar">
-            <SideBarMenu icon={<ChevronsLeft size={40} />} title="Collapse" />
+          <aside className="sidebar"
+          style={{
+width:CloseState===true?"300px":"75px",
+
+
+          }}
+          >
+            <div className="CollapseButtonTop">
+            <SideBarMenu 
+              style={{
+                width:CloseState===true?"300px":"75px",
+                
+                
+                          }}
+            icon={<ChevronsLeft size={40} />} title="Collapse" />
+            </div>
+           
             <ListContainer />
 
-            <div className="CollapseButtonEnd">
-              <div className="EndButton ">
+          <div className="CollapseButtonEnd"
+            style={{
+              width:CloseState===true?"300px":"75px",
+              
+              
+                        }}
+          >
+              <div className="EndButton "
+              
+              >
                 <SideBarMenu icon={<Settings size={40} />} title="Settings" />
               </div>
-              <div className="EndButton Action">
+            
                 <div className="EndButton Action ">
                   <SideBarMenu
                     icon={<LogOut size={40} />}
                     action="Action"
                     title="Logout"
                   />
-                </div>
+                
               </div>
-            </div>
+            </div> 
           </aside>
         )}
       </div>

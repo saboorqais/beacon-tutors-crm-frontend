@@ -4,6 +4,7 @@
     background-color: #101928;
     display: flex;
     align-items: center;
+   
     
   
   }
@@ -11,6 +12,7 @@
   margin-left: 26.75px;
   margin-top: 26.75px;
   margin-bottom: 26.75px;
+  cursor: pointer;
   }
   .CollapseText{
   margin-left: 41px;

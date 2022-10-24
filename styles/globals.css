@@ -16,7 +16,7 @@ body{
   position: inherit;
   height: 100%;
   overflow: hidden;
-
+  transition: all .3s ease-in;
   font-family: 'Poppins', sans-serif;
 
 }
@@ -285,7 +285,7 @@ button:disabled {
   width: 300px;
   max-height: 100vh;
   overflow: hidden;
-
+  transition:width .9s ease-in-out
 }
 
 
@@ -316,13 +316,14 @@ margin :22.5px
 
 }
 .DropdownItems{
-  transform-origin: top center;
+  
  position: relative;
   margin-top: 0px;
   background-color: #17243A;
   border-radius: 12px;
   margin-left: 11px;
   margin-right: 11px;
+  transition: all 1.5s ease-in-out;
 }
 .displayOFF{
 
@@ -347,8 +348,6 @@ display: block;
   
  }
  .CollapseButtonEnd{
-
-  width: 300px;
   height: 75px;
   background-color: #101928;
   position: absolute;
@@ -358,7 +357,7 @@ display: block;
   flex-direction: column;
   align-items: center;
   box-shadow: 0px -160px 45px rgba(3, 3, 3, 0.01), 0px -102px 41px rgba(3, 3, 3, 0.08), 0px -57px 34px rgba(3, 3, 3, 0.28), 0px -26px 26px rgba(3, 3, 3, 0.47), 0px -6px 14px rgba(3, 3, 3, 0.55), 0px 0px 0px rgba(3, 3, 3, 0.56);
-
+transition: all .9s ease-in-out;
 
  }
  .EndButton{
@@ -424,7 +423,7 @@ line-height: 40px;
 }
 
 .SiderbarFlex{
-  width: 300px;
+  
 }
 .LeftOverFlex{
   width: 100%;
@@ -468,3 +467,18 @@ border: 2px solid rgba(23, 36, 58, 0.25);
 }
 
 
+.CollapseButtonTop{
+
+top: 0;
+left: 0;
+
+}
+.HeightChange{
+ max-height: 0px;
+ min-height: 0px;
+height: 0;
+}
+.HeightGrow{
+  max-height: 10000px;
+
+}

@@ -1,7 +1,9 @@
-import { Link } from "lucide-react";
+import { Link, LogOut } from "lucide-react";
 import { useRouter } from "next/router";
 import React from "react";
+import { Settings } from "tabler-icons-react";
 import styles from "../ListContainer/ListContainer.module.css";
+import SideBarMenu from "../SideBarMenu/SideBarMenu";
 import { SidePanelList } from "../SidePanelList";
 const rawInquiry = [
   {
@@ -120,14 +122,19 @@ function ListContainer() {
   const router = useRouter();
   return (
     <div className={styles.ListContainer}>
-         <Link href={"/funded"}>
+      <Link href={"/funded"}>
         <a className={router.asPath === "/funded" && "selected"}>Funded</a>
       </Link>
-      {AllList.map((item,key) => (
-        
-        <SidePanelList rawInquiry={item[0]} sectionName={item[1]} key={key} />
-      ))}
+      {AllList.map((item, index) => (
      
+        <SidePanelList
+          rawInquiry={item[0]}
+          sectionName={item[1]}
+          index={index + 1}
+        />
+      ))}
+
+      
     </div>
   );
 }

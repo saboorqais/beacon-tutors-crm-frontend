@@ -1,8 +1,12 @@
 
 import React from "react";
 import styles from "../SideBarMenu/SideBarMenu.module.css";
-
+import { useDispatch, useSelector } from "react-redux";
+import { selectCloseSlice, selectCloseState,setCloseState } from "../Reducers/CloseState";
 function SideBarMenu(props) {
+  const CloseState = useSelector(selectCloseState);
+  const dispatch = useDispatch();
+  console.log(CloseState)
   return (
     <div
       className={`${styles.CollapseButton} ${
@@ -12,9 +16,7 @@ function SideBarMenu(props) {
       <div
         className={styles.ChevronsLeft}
         onClick={() => {
-          if (props.open) {
-            props.open(true);
-          }
+          dispatch(setCloseState(!CloseState))
         }}
       >
         {props.icon}
