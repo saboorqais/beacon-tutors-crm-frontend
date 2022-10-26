@@ -8,7 +8,7 @@ import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArro
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { Pagination } from "@mantine/core";
-import { usePagination } from '@mantine/hooks';
+import { usePagination } from "@mantine/hooks";
 // Example items, to simulate fetching from another resources.
 const items = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
@@ -17,97 +17,67 @@ const items = [
   14.1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
 ];
 
-
-export default function PaginationPage({ }) {
-  const [activeState, setactiveState] = useState(1)
+export default function PaginationPage({}) {
+  const [activeState, setactiveState] = useState(1);
   const onChange = (event) => {
-    console.log(event)
-setactiveState(event)
-  };// We start with an empty list of items.
-  const pagination = usePagination({ total: 10, items,onChange });
+    console.log(event);
+    setactiveState(event);
+  }; // We start with an empty list of items.
+  const pagination = usePagination({ total: 10, items, onChange });
 
-useEffect(() => {
- console.log(activeState)
-}, [activeState])
-
- 
+  useEffect(() => {
+    console.log(activeState);
+  }, [activeState]);
 
   // Invoke when user click to request another page.
-  
 
   return (
-  <div className={styles.ContainerCenter}>
-    
-    <div className={styles.MainContainer}>
-    <KeyboardDoubleArrowLeftIcon
-    onClick={()=>{
-      setactiveState(pagination.active)
-      pagination.first()
-    
-      console.log(pagination.active)
-    }}
-    />
-      <KeyboardArrowLeftIcon
-      onClick={()=>{
-        setactiveState(pagination.active)
-        pagination.previous()
+    <div className={styles.ContainerCenter}>
+      <div className={styles.MainContainer}>
+        <KeyboardDoubleArrowLeftIcon
+          onClick={() => {
+            setactiveState(pagination.active);
+            pagination.first();
+          }}
+        />
+        <KeyboardArrowLeftIcon
+          onClick={() => {
+            setactiveState(pagination.active);
+            pagination.previous();
+          }}
+        />
 
-        
-        console.log(pagination.active)
-      }}
-      />
-      {console.log(pagination.range)}
-      {
-        pagination.range.map((value,index)=>(
-          
-            value==="dots"?(<div 
-            
-              className={`${styles.PaginateButton}}`}
-              
-              >...</div>):(<div 
-                onClick={()=>{
-                  pagination.setPage(value)
-                  setactiveState(value)
-                 
-               console.log(activeState)
-               console.log(pagination.active)
-                }}
-                className={`${styles.PaginateButton}  ${activeState===value?styles.Active:""}`}
-                
-                >{value}</div>)
-          
-          
+        {pagination.range.map((value, index) =>
+          value === "dots" ? (
+            <div className={`${styles.PaginateButton}}`}>...</div>
+          ) : (
+            <div
+              onClick={() => {
+                pagination.setPage(value);
+                setactiveState(value);
+              }}
+              className={`${styles.PaginateButton}  ${
+                activeState === value ? styles.Active : ""
+              }`}
+            >
+              {value}
+            </div>
+          )
+        )}
 
-        ))
-      }
-     
-
-     
-      <KeyboardArrowRightIcon
-      
-      onClick={()=>{
-        setactiveState(pagination.active)
-        pagination.next()
-       
-        console.log(pagination.active)
-      }}
-      />
-      <KeyboardDoubleArrowRightIcon
-       onClick={()=>{
-        setactiveState(pagination.active)
-        pagination.last()
-        
-        console.log(pagination.active)
-
-      
-      }}
-      />
-     
+        <KeyboardArrowRightIcon
+          onClick={() => {
+            setactiveState(pagination.active);
+            pagination.next();
+          }}
+        />
+        <KeyboardDoubleArrowRightIcon
+          onClick={() => {
+            setactiveState(pagination.active);
+            pagination.last();
+          }}
+        />
+      </div>
     </div>
-    
-     
-      
-    </div> 
-
   );
 }
