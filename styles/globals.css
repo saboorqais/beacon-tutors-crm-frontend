@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;600&display=swap');
 html{
-  transition: all .2s ease-in-out;
+  transition: all .3s ease-in-out;
   padding: 0;
   margin: 0;
   position: relative;
@@ -285,13 +285,22 @@ button:disabled {
   width: 300px;
   max-height: 100vh;
   overflow: hidden;
-  transition:width .9s ease-in-out
+  transition:width .3s ease-in-out
 }
 
 
+.IconSectionSidebarDropdown{
+margin-left:18.5px;
+margin-top :22.5px;
+margin-bottom :22.5px;
+margin-right: 22.5px;
+}
 .IconSectionSidebar{
-margin :22.5px
-}
+  margin-left:22.5px;
+  margin-top :22.5px;
+  margin-bottom :22.5px;
+  margin-right: 22.5px;
+  }
 .LabelSectionSidebar{
   font-family: 'Poppins';
   font-style: normal;
@@ -301,6 +310,7 @@ margin :22.5px
   width:175px;
   display: flex;
   align-items: center;
+  justify-items: center;
 }
 .DropdownSidebar{
   display: flex;
@@ -321,9 +331,9 @@ margin :22.5px
   margin-top: 0px;
   background-color: #17243A;
   border-radius: 12px;
-  margin-left: 11px;
-  margin-right: 11px;
-  transition: all 1.5s ease-in-out;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all .3s ease-in-out;
 }
 .displayOFF{
 
@@ -357,7 +367,8 @@ display: block;
   flex-direction: column;
   align-items: center;
   box-shadow: 0px -160px 45px rgba(3, 3, 3, 0.01), 0px -102px 41px rgba(3, 3, 3, 0.08), 0px -57px 34px rgba(3, 3, 3, 0.28), 0px -26px 26px rgba(3, 3, 3, 0.47), 0px -6px 14px rgba(3, 3, 3, 0.55), 0px 0px 0px rgba(3, 3, 3, 0.56);
-transition: all .9s ease-in-out;
+transition: all .3s ease-in-out;
+
 
  }
  .EndButton{
@@ -474,11 +485,11 @@ left: 0;
 
 }
 .HeightChange{
- max-height: 0px;
- min-height: 0px;
-height: 0;
+
+height: 0px;
 }
 .HeightGrow{
+ 
   max-height: 10000px;
 
 }

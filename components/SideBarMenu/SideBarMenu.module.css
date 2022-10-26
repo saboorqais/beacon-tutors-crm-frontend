@@ -1,6 +1,5 @@
 .CollapseButton{
-    width: 300px;
-    height: 75px;
+        height: 75px;
     background-color: #101928;
     display: flex;
     align-items: center;
@@ -9,9 +8,12 @@
   
   }
   .ChevronsLeft{
-  margin-left: 26.75px;
-  margin-top: 26.75px;
-  margin-bottom: 26.75px;
+display: flex;
+align-items: center;
+justify-content: center;
+min-width: 75px;
+  width: 75px;
+  display: flex;
   cursor: pointer;
   }
   .CollapseText{
@@ -23,8 +25,8 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 33px;
-  width: 100%;
-  
+  width: 225px;
+  transition: color .9s ease-in-out;
   }
   .Action{
     background-color: #AC1C36;

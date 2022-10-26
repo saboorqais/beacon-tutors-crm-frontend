@@ -21,7 +21,12 @@ function SideBarMenu(props) {
       >
         {props.icon}
       </div>
-      <div className={styles.CollapseText}>{props.title}</div>
+      <div 
+      style={{
+        display:CloseState===true?"block":"none",
+        color:CloseState===true?"#FFFFFF":"none"
+      }}
+      className={styles.CollapseText}>{props.title}</div>
     </div>
   );
 }

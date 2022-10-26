@@ -16,7 +16,11 @@ import MainContainer from "../MainContainer/MainContainer";
 import SideBarMenu from "../SideBarMenu/SideBarMenu";
 import ListContainer from "../ListContainer/ListContainer";
 import { useDispatch, useSelector } from "react-redux";
-import { selectCloseSlice, selectCloseState,setCloseState } from "../Reducers/CloseState";
+import {
+  selectCloseSlice,
+  selectCloseState,
+  setCloseState,
+} from "../Reducers/CloseState";
 import { width } from "@mui/system";
 export default function Layout({ children }) {
   const router = useRouter();
@@ -32,47 +36,42 @@ export default function Layout({ children }) {
     <div className="mainContainer">
       <div className="SiderbarFlex">
         {!(router.asPath === "/signin") && (
-          <aside className="sidebar"
-          style={{
-width:CloseState===true?"300px":"75px",
-
-
-          }}
+          <aside
+            className="sidebar"
+            style={{
+              width: CloseState === true ? "300px" : "75px",
+            }}
           >
             <div className="CollapseButtonTop">
-            <SideBarMenu 
-              style={{
-                width:CloseState===true?"300px":"75px",
-                
-                
-                          }}
-            icon={<ChevronsLeft size={40} />} title="Collapse" />
+              <SideBarMenu
+                style={{
+                  width: CloseState === true ? "300px" : "75px",
+                }}
+                icon={<ChevronsLeft size={40} />}
+                title="Collapse"
+              />
             </div>
-           
+
             <ListContainer />
 
-          <div className="CollapseButtonEnd"
-            style={{
-              width:CloseState===true?"300px":"75px",
-              
-              
-                        }}
-          >
-              <div className="EndButton "
-              
-              >
+            <div
+              className="CollapseButtonEnd"
+              style={{
+                width: CloseState === true ? "300px" : "75px",
+              }}
+            >
+              <div className="EndButton">
                 <SideBarMenu icon={<Settings size={40} />} title="Settings" />
               </div>
-            
-                <div className="EndButton Action ">
-                  <SideBarMenu
-                    icon={<LogOut size={40} />}
-                    action="Action"
-                    title="Logout"
-                  />
-                
+
+              <div className="EndButton Action ">
+                <SideBarMenu
+                  icon={<LogOut size={40} />}
+                  action="Action"
+                  title="Logout"
+                />
               </div>
-            </div> 
+            </div>
           </aside>
         )}
       </div>
