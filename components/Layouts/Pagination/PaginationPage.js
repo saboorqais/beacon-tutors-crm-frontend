@@ -1,89 +1,113 @@
-import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
-import ReactPaginate from 'react-paginate';
-import styles from '../Pagination/pagination.module.css'
+import React, { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
+import ReactPaginate from "react-paginate";
+import styles from "../Pagination/pagination.module.css";
 
-import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight'
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
+import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { Pagination } from "@mantine/core";
+import { usePagination } from '@mantine/hooks';
 // Example items, to simulate fetching from another resources.
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14.1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14.1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14.1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+const items = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+  11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14.1, 2, 3, 4, 5,
+  6, 7, 8, 9, 10, 11, 12, 13, 14.1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+  14.1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
+];
 
-function Items({ currentItems }) {
-  return (
-    <>
-      {currentItems &&
-        currentItems.map((item) => (
-          <div>
-            <h3>Item #{item}</h3>
-          </div>
-        ))}
-    </>
-  );
-}
 
-export default function PaginationPage({ itemsPerPage=4}) {
-  // We start with an empty list of items.
-  const [currentItems, setCurrentItems] = useState(null);
-  const [pageCount, setPageCount] = useState(0);
-  // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
-  const [itemOffset, setItemOffset] = useState(0);
+export default function PaginationPage({ }) {
+  const [activeState, setactiveState] = useState(1)
+  const onChange = (event) => {
+    console.log(event)
+setactiveState(event)
+  };// We start with an empty list of items.
+  const pagination = usePagination({ total: 10, items,onChange });
 
-  useEffect(() => {
-    // Fetch items from another resources.
-    const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-    setCurrentItems(items.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(items.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage]);
+useEffect(() => {
+ console.log(activeState)
+}, [activeState])
+
+ 
 
   // Invoke when user click to request another page.
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % items.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
-    setItemOffset(newOffset);
-  };
+  
 
   return (
-    <>
+  <div className={styles.ContainerCenter}>
     
-{/*      
-      <KeyboardDoubleArrowLeftIcon/>
-      <KeyboardArrowLeftIcon/>
-      <div className={styles.PaginateButton}>1</div>
-      <div className={styles.PaginateButton}>2</div>
-      <div className={styles.PaginateButton}>3</div>
-      <div>...</div>
-      <div className={`${styles.PaginateButton} ${styles.Active}`}>10</div>
-      <div className={styles.PaginateButton}>11</div>
-      <div className={styles.PaginateButton}>12</div>
-      <KeyboardArrowRightIcon/>
-      <KeyboardDoubleArrowRightIcon/>
-     </div> */}
-       <div
+    <div className={styles.MainContainer}>
+    <KeyboardDoubleArrowLeftIcon
+    onClick={()=>{
+      setactiveState(pagination.active)
+      pagination.first()
+    
+      console.log(pagination.active)
+    }}
+    />
+      <KeyboardArrowLeftIcon
+      onClick={()=>{
+        setactiveState(pagination.active)
+        pagination.previous()
+
+        
+        console.log(pagination.active)
+      }}
+      />
+      {console.log(pagination.range)}
+      {
+        pagination.range.map((value,index)=>(
+          
+            value==="dots"?(<div 
+            
+              className={`${styles.PaginateButton}}`}
+              
+              >...</div>):(<div 
+                onClick={()=>{
+                  pagination.setPage(value)
+                  setactiveState(value)
+                 
+               console.log(activeState)
+               console.log(pagination.active)
+                }}
+                className={`${styles.PaginateButton}  ${activeState===value?styles.Active:""}`}
+                
+                >{value}</div>)
+          
+          
+
+        ))
+      }
+     
+
+     
+      <KeyboardArrowRightIcon
+      
+      onClick={()=>{
+        setactiveState(pagination.active)
+        pagination.next()
        
-       className={styles.MainContainer} >
-         <KeyboardDoubleArrowLeftIcon/>
-       <ReactPaginate 
-     className={styles.PaginateContainer}
-     containerClassName={styles.PagingContainer}
-        breakLabel="..."  
-        activeClassName={styles.Active}
-        nextLabel={<KeyboardArrowRightIcon/> }  
-        onPageChange={handlePageClick}  
-        DisplayedPageRange = {1}  
-        pageCount={pageCount}  
-        previousLabel={<KeyboardArrowLeftIcon/>}  
-        renderOnZeroPageCount={null}  
-      />  
-      <KeyboardDoubleArrowRightIcon/>
-        </div>
+        console.log(pagination.active)
+      }}
+      />
+      <KeyboardDoubleArrowRightIcon
+       onClick={()=>{
+        setactiveState(pagination.active)
+        pagination.last()
+        
+        console.log(pagination.active)
+
+      
+      }}
+      />
+     
+    </div>
+    
      
       
-    </>
+    </div> 
+
   );
 }

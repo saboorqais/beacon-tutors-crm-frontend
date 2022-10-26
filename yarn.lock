@@ -1621,34 +1621,34 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mantine/core@^5.5.5":
-  "integrity" "sha512-VjNpz5mvV1hg6RbVuLkA9uY+iS3Ocpg9C0ZjnBuMKbDA9TYmpxgLJ1Eo56OMfJvQ03W8qG/prIwY8QNZddtNBg=="
-  "resolved" "https://registry.npmjs.org/@mantine/core/-/core-5.5.5.tgz"
-  "version" "5.5.5"
+"@mantine/core@^5.6.2":
+  "integrity" "sha512-H42PBsiEsuA2g+c2RzEnw+rbNw+lFMqsJCgeH41DaugPGjRYgDuYkE1h6wkCbroXIcIGbcltnz1w7oTpF3eOYw=="
+  "resolved" "https://registry.npmjs.org/@mantine/core/-/core-5.6.2.tgz"
+  "version" "5.6.2"
   dependencies:
     "@floating-ui/react-dom-interactions" "^0.10.1"
-    "@mantine/styles" "5.5.5"
-    "@mantine/utils" "5.5.5"
+    "@mantine/styles" "5.6.2"
+    "@mantine/utils" "5.6.2"
     "@radix-ui/react-scroll-area" "1.0.0"
     "react-textarea-autosize" "8.3.4"
 
-"@mantine/hooks@5.5.5":
-  "integrity" "sha512-qWZAZm203s0knYk6Ut4VPvur9H5BMul02cCb9E09s60iSjnLRHDC3f73VmSzmLZNVfgE+7hXUhguR/1lC7js4Q=="
-  "resolved" "https://registry.npmjs.org/@mantine/hooks/-/hooks-5.5.5.tgz"
-  "version" "5.5.5"
+"@mantine/hooks@5.6.2":
+  "integrity" "sha512-kstAXKXQc6WSbBJ+X7v/E1dtSjUnauMZ4NTS6FK3PpQBlRaRZhEVPHYeMoyfnIvcmU6IWdv3LjkRYOzcCtumOQ=="
+  "resolved" "https://registry.npmjs.org/@mantine/hooks/-/hooks-5.6.2.tgz"
+  "version" "5.6.2"
 
-"@mantine/styles@5.5.5":
-  "integrity" "sha512-cAYLoqQbnyoJepD7zstFF+A2/rj8DJblBzEdri0V+CWQccpqfP5xOTPEvCHVwQUODg40uT9PyVwFZ4h+zyyzvg=="
-  "resolved" "https://registry.npmjs.org/@mantine/styles/-/styles-5.5.5.tgz"
-  "version" "5.5.5"
+"@mantine/styles@5.6.2":
+  "integrity" "sha512-lMIYU+tbZS2F7LBCD2KOxGbR4Upx0Vl8gbbxDYFJIPi/M0LCQbQg5tYTIVtlO2oNAiIoTOpPVt66ITLFPdlEkg=="
+  "resolved" "https://registry.npmjs.org/@mantine/styles/-/styles-5.6.2.tgz"
+  "version" "5.6.2"
   dependencies:
     "clsx" "1.1.1"
     "csstype" "3.0.9"
 
-"@mantine/utils@5.5.5":
-  "integrity" "sha512-nt8+A0N1cV4cJNqlKuXazShoEwqtLohHNKFuywEdF3B6vHWdbY799PbT2WmqGTwNQ+se8y5/nBMmamBZrUN4fg=="
-  "resolved" "https://registry.npmjs.org/@mantine/utils/-/utils-5.5.5.tgz"
-  "version" "5.5.5"
+"@mantine/utils@5.6.2":
+  "integrity" "sha512-oWBVtewwIiqqKMCw8JahrHsDb1h68Eq878RWhnH+wOC1FOz1oV0ZXz0+5/gMUFZGss0duWEZXTVXafkBnD2HZA=="
+  "resolved" "https://registry.npmjs.org/@mantine/utils/-/utils-5.6.2.tgz"
+  "version" "5.6.2"
 
 "@mui/base@5.0.0-alpha.102":
   "integrity" "sha512-5e/qAIP+DlkrZxIt/cwnDw/A3ii22WkoEoWKHyu4+oeGs3/1Flh7qLaN4h5EAIBB9TvTEZEUzvmsTInmIj6ghg=="
