@@ -22,6 +22,7 @@ import {
   setCloseState,
 } from "../Reducers/CloseState";
 import { width } from "@mui/system";
+import PaginationPage from "./Pagination/PaginationPage";
 export default function Layout({ children }) {
   const router = useRouter();
   const Pattern = dynamic(() =>
@@ -82,6 +83,7 @@ export default function Layout({ children }) {
 
         <Nav />
         <MainContainer />
+        
 
         <div className={"pageLayout"}>
           <main>{children}</main>

@@ -348,7 +348,8 @@ display: block;
 
  .mainContainer{
   display: flex;
-  min-height: 100%;
+  
+
 
  }
 

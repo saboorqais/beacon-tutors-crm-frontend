@@ -21,7 +21,7 @@ function MainContainer() {
       </div>
       <FieldContainer/>
 
-  
+      <PaginationPage/>
     
     </div>
   );

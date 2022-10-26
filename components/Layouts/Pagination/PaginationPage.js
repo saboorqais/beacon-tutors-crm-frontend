@@ -2,8 +2,13 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import ReactPaginate from 'react-paginate';
 import styles from '../Pagination/pagination.module.css'
+
+import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight'
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 // Example items, to simulate fetching from another resources.
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14.1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14.1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14.1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
 function Items({ currentItems }) {
   return (
@@ -45,19 +50,40 @@ export default function PaginationPage({ itemsPerPage=4}) {
 
   return (
     <>
-      <Items
+    
+{/*      
+      <KeyboardDoubleArrowLeftIcon/>
+      <KeyboardArrowLeftIcon/>
+      <div className={styles.PaginateButton}>1</div>
+      <div className={styles.PaginateButton}>2</div>
+      <div className={styles.PaginateButton}>3</div>
+      <div>...</div>
+      <div className={`${styles.PaginateButton} ${styles.Active}`}>10</div>
+      <div className={styles.PaginateButton}>11</div>
+      <div className={styles.PaginateButton}>12</div>
+      <KeyboardArrowRightIcon/>
+      <KeyboardDoubleArrowRightIcon/>
+     </div> */}
+       <div
+       
+       className={styles.MainContainer} >
+         <KeyboardDoubleArrowLeftIcon/>
+       <ReactPaginate 
+     className={styles.PaginateContainer}
+     containerClassName={styles.PagingContainer}
+        breakLabel="..."  
+        activeClassName={styles.Active}
+        nextLabel={<KeyboardArrowRightIcon/> }  
+        onPageChange={handlePageClick}  
+        DisplayedPageRange = {1}  
+        pageCount={pageCount}  
+        previousLabel={<KeyboardArrowLeftIcon/>}  
+        renderOnZeroPageCount={null}  
+      />  
+      <KeyboardDoubleArrowRightIcon/>
+        </div>
+     
       
-      currentItems={currentItems} />
-      <ReactPaginate
-      className={styles.Paginate}
-        breakLabel="..."
-        nextLabel="next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel="< previous"
-        renderOnZeroPageCount={null}
-      />
     </>
   );
 }
