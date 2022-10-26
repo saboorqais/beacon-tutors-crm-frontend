@@ -1,6 +1,7 @@
 import React from "react";
-import FieldContainer from "../Layouts/FieldContainer/FieldContainer";
-import PaginationPage from "../Layouts/Pagination/PaginationPage";
+import FieldContainer from "../FieldContainer/FieldContainer";
+
+import PaginationPage from "../Pagination/PaginationPage";
 
 function MainContainer() {
   return (
@@ -20,7 +21,6 @@ function MainContainer() {
         </div>
       </div>
       <FieldContainer/>
-
       <PaginationPage/>
     
     </div>

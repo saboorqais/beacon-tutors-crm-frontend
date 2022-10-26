@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "../SideBarMenu/SideBarMenu.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { selectCloseSlice, selectCloseState,setCloseState } from "../Reducers/CloseState";
+import { selectCloseState,setCloseState } from "../Reducers/CloseState";
 function SideBarMenu(props) {
   const CloseState = useSelector(selectCloseState);
   const dispatch = useDispatch();
