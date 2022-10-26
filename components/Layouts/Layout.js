@@ -35,9 +35,10 @@ export default function Layout({ children }) {
 
   return (
     <div className="mainContainer">
-      <div className="SiderbarFlex">
+    
         {!(router.asPath === "/signin") && (
-          <aside
+           <div className="SiderbarFlex">
+         <aside
             className="sidebar"
             style={{
               width: CloseState === true ? "300px" : "75px",
@@ -74,16 +75,19 @@ export default function Layout({ children }) {
               </div>
             </div>
           </aside>
+          </div>
         )}
-      </div>
-      <div className="LeftOverFlex">
+      
+      <div className={!(router.asPath === "/signin")?"LeftOverFlex":"SignInContainer"}>
         <div className={"background"}>
           <Pattern width="100%" height="100%" />
         </div>
 
         <Nav />
-        <MainContainer />
-        
+        {!(router.asPath === "/signin") && (
+
+          <MainContainer />
+        )}        
 
         <div className={"pageLayout"}>
           <main>{children}</main>
@@ -92,3 +96,4 @@ export default function Layout({ children }) {
     </div>
   );
 }
+

@@ -20,7 +20,7 @@ const items = [
 export default function PaginationPage({}) {
   const [activeState, setactiveState] = useState(1);
   const onChange = (event) => {
-    console.log(event);
+
     setactiveState(event);
   }; // We start with an empty list of items.
   const pagination = usePagination({ total: 10, items, onChange });

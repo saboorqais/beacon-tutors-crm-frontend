@@ -35,8 +35,10 @@ button {
 
 .pageLayout{
   display: flex;
-  margin-top: 55px;
+  margin-top: 0px;
   color: white;
+  justify-content: center;
+  align-items: center;
   
  
 }
@@ -493,4 +495,7 @@ height: 0px;
  
   max-height: 10000px;
 
+}
+.SignInContainer{
+  width: 100%;
 }
