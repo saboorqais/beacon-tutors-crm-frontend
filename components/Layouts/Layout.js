@@ -1,28 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import dynamic from "next/dynamic";
 import Nav from "../Nav/Nav";
-import { SidePanelList } from "../SidePanelList";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   ChevronsLeft,
-  Folder,
-  ChevronDown,
-  ChevronUp,
   Settings,
   LogOut,
 } from "lucide-react";
 import MainContainer from "../MainContainer/MainContainer";
 import SideBarMenu from "../SideBarMenu/SideBarMenu";
 import ListContainer from "../ListContainer/ListContainer";
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import {
-  selectCloseSlice,
   selectCloseState,
-  setCloseState,
 } from "../Reducers/CloseState";
-import { width } from "@mui/system";
-import PaginationPage from "./Pagination/PaginationPage";
+import styles from "../Layouts/Layout.module.css";
 export default function Layout({ children }) {
   const router = useRouter();
   const Pattern = dynamic(() =>
@@ -31,20 +23,17 @@ export default function Layout({ children }) {
     )
   );
   const CloseState = useSelector(selectCloseState);
-  const dispatch = useDispatch();
-
   return (
-    <div className="mainContainer">
-    
-        {!(router.asPath === "/signin") && (
-           <div className="SiderbarFlex">
-         <aside
-            className="sidebar"
+    <div className={styles.mainContainer}>
+      {!(router.asPath === "/signin") && (
+        <div>
+          <aside
+            className={styles.sidebar}
             style={{
               width: CloseState === true ? "300px" : "75px",
             }}
           >
-            <div className="CollapseButtonTop">
+            <div className={styles.CollapseButtonTop}>
               <SideBarMenu
                 style={{
                   width: CloseState === true ? "300px" : "75px",
@@ -57,16 +46,16 @@ export default function Layout({ children }) {
             <ListContainer />
 
             <div
-              className="CollapseButtonEnd"
+              className={styles.CollapseButtonEnd}
               style={{
                 width: CloseState === true ? "300px" : "75px",
               }}
             >
-              <div className="EndButton">
+              <div className={styles.EndButton}>
                 <SideBarMenu icon={<Settings size={40} />} title="Settings" />
               </div>
 
-              <div className="EndButton Action ">
+              <div className={`${styles.EndButton}`}>
                 <SideBarMenu
                   icon={<LogOut size={40} />}
                   action="Action"
@@ -75,25 +64,27 @@ export default function Layout({ children }) {
               </div>
             </div>
           </aside>
-          </div>
-        )}
-      
-      <div className={!(router.asPath === "/signin")?"LeftOverFlex":"SignInContainer"}>
-        <div className={"background"}>
+        </div>
+      )}
+
+      <div
+        className={
+          !(router.asPath === "/signin")
+            ? `${styles.LeftOverFlex}`
+            : `${styles.SignInContainer}`
+        }
+      >
+        <div className={styles.background}>
           <Pattern width="100%" height="100%" />
         </div>
 
         <Nav />
-        {!(router.asPath === "/signin") && (
+        {!(router.asPath === "/signin") && <MainContainer />}
 
-          <MainContainer />
-        )}        
-
-        <div className={"pageLayout"}>
+        <div className={styles.pageLayout}>
           <main>{children}</main>
         </div>
       </div>
     </div>
   );
 }
-
