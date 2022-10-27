@@ -1,24 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;600&display=swap');
-html{
-  transition: all .3s ease-in-out;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;600&display=swap");
+html {
+  transition: all 0.3s ease-in-out;
   padding: 0;
   margin: 0;
   position: relative;
   height: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-
 }
 
-body{
+body {
   padding: 0;
   margin: 0;
   position: inherit;
   height: 100%;
   overflow: hidden;
-  transition: all .3s ease-in;
-  font-family: 'Poppins', sans-serif;
-
+  transition: all 0.3s ease-in;
+  font-family: "Poppins", sans-serif;
 }
 
 body > * {
@@ -30,13 +28,11 @@ button {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-
-
 /*temporary for showing selected item in side panel*/
-.selected{
+.selected {
   background: black;
   color: white;
 }
@@ -44,7 +40,7 @@ button {
 input,
 textarea,
 select {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 input::-ms-reveal,
@@ -70,8 +66,6 @@ a {
 /*    background: black;*/
 /*  }*/
 /*}*/
-
-
 
 /* Admin panel global styles */
 
@@ -162,7 +156,7 @@ a {
 }
 
 .adminButton:hover {
-  background-color: #17243A;
+  background-color: #17243a;
 }
 
 .adminButton:active,
@@ -261,183 +255,90 @@ button:disabled {
   transition: opacity 0.3s;
 }
 
-
-
-
-.IconSectionSidebarDropdown{
-margin-left:18.5px;
-margin-top :22.5px;
-margin-bottom :22.5px;
-margin-right: 22.5px;
-}
-.IconSectionSidebar{
-  margin-left:22.5px;
-  margin-top :22.5px;
-  margin-bottom :22.5px;
+.IconSectionSidebarDropdown {
+  margin-left: 18.5px;
+  margin-top: 22.5px;
+  margin-bottom: 22.5px;
   margin-right: 22.5px;
-  }
-.LabelSectionSidebar{
-  font-family: 'Poppins';
+}
+.IconSectionSidebar {
+  margin-left: 22.5px;
+  margin-top: 22.5px;
+  margin-bottom: 22.5px;
+  margin-right: 22.5px;
+}
+.LabelSectionSidebar {
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
-  width:175px;
+  width: 175px;
   display: flex;
   align-items: center;
   justify-items: center;
 }
-.DropdownSidebar{
+.DropdownSidebar {
   display: flex;
   align-items: center;
-  transition: .3s ease-in;
-  background-color: #01121C;
+  transition: 0.3s ease-in;
+  background-color: #01121c;
   cursor: pointer;
 }
-.DropDownSideBarArrow
-{
+.DropDownSideBarArrow {
   display: flex;
   align-items: center;
-
 }
-.DropdownItems{
-  
- position: relative;
+.DropdownItems {
+  position: relative;
   margin-top: 0px;
-  background-color: #17243A;
+  background-color: #17243a;
   border-radius: 12px;
   margin-left: 5px;
   margin-right: 5px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.displayOFF{
-
+.displayOFF {
   display: none;
-  
-  }
-.displayON{
-display: block;
+}
+.displayON {
+  display: block;
   transform: scaleY(1);
- }
+}
 
-
- .mainContainer{
+.mainContainer {
   display: flex;
-  
+}
 
-
- }
-
- .ListContainer{
+.ListContainer {
   max-height: 100vh;
   overflow: auto;
-  
- }
- 
- 
- .Normal{
+}
 
-  background-color: #101928;;
- }
+.Normal {
+  background-color: #101928;
+}
 
- .MarginIcon{
-
+.MarginIcon {
   padding-left: 26.5px;
   padding-bottom: 26.5px;
   padding-top: 26.5px;
- }
-
- ::-webkit-scrollbar {
-  width: 1.1rem;
 }
 
+::-webkit-scrollbar {
+  width: 1.1rem;
+}
 
 ::-webkit-scrollbar-thumb {
   border: 0.44rem solid transparent;
   background-clip: padding-box;
   border-radius: 2rem;
-  background-color: #384f76;;
-
+  background-color: #384f76;
 }
 
-
-.MainContainer{
-  min-width:100%;
-  height: 100vh;
-
-  z-index: -100;
- 
+.HeightChange {
+  height: 0px;
 }
-
-.HeadingContainer{
-display: flex;
-flex-direction: column;
-width: 100%;
-
-background: #FFFFFF;
-border-bottom: 1px solid rgb(155, 155, 155);
-
-}
-.Heading{
-
-width: 100%;
-height: 40px;
-color: #061537;
-font-family: 'Poppins';
-display: flex;
-margin-top: 60px;
-justify-content: center;
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 40px;
-}
-
-
-.TabsHeading{
-  margin-top: 25px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px;
-  max-width: 80%;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
-  background-color: #632222;
-  border-radius: 18px;
-  background: #FFFFFF;
-
-
-  border-right: #ffffff;
-}
-.IndividualTab{
-background: #17243A;
-border-radius: 11px;
-padding: 14px 25px;
-margin: 5px 10px ;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 20px;
-/* identical to box height */
-color: #ffffff;
-display: flex;
-align-items: center;
-text-align: center;
-border: 2px solid rgba(23, 36, 58, 0.25);
-}
-
-
-
-.HeightChange{
-
-height: 0px;
-}
-.HeightGrow{
- 
+.HeightGrow {
   max-height: 10000px;
-
 }
