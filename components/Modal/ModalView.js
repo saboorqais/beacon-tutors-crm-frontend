@@ -16,9 +16,9 @@ function ModalView({ opened, setopened }) {
       <div
       className={styles.Container}
       >
-      <div>
+      <div className={styles.InnerContainer}>
         <div>Name</div>
-        <div>
+        <div className={styles.InputContainer}>
         
           <TextInput  withAsterisk />
         </div>
