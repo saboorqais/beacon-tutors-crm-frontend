@@ -1,5 +1,6 @@
 import { Modal, TextInput } from "@mantine/core";
 import { useState } from "react";
+import styles from "../Modal/ModalView.module.css"
 function ModalView({ opened, setopened }) {
   return (
     <Modal
@@ -12,55 +13,60 @@ function ModalView({ opened, setopened }) {
       title="View inquiry"
       closeButtonLabel="X"
     >
+      <div
+      className={styles.Container}
+      >
       <div>
         <div>Name</div>
         <div>
         
-          <TextInput placeholder="Your name" label="Full name" withAsterisk />
+          <TextInput  withAsterisk />
         </div>
       </div>
       <div>
         <div>Name</div>
         <div>
         
-          <TextInput placeholder="Your name" label="Full name" withAsterisk />
+          <TextInput  withAsterisk />
         </div>
       </div>
       <div>
         <div>Name</div>
         <div>
         
-          <TextInput placeholder="Your name" label="Full name" withAsterisk />
+          <TextInput  withAsterisk />
         </div>
       </div>
       <div>
         <div>Name</div>
         <div>
         
-          <TextInput placeholder="Your name" label="Full name" withAsterisk />
+          <TextInput  withAsterisk />
         </div>
       </div>
       <div>
         <div>Name</div>
         <div>
         
-          <TextInput placeholder="Your name" label="Full name" withAsterisk />
+          <TextInput  withAsterisk />
         </div>
       </div>
       <div>
         <div>Name</div>
         <div>
         
-          <TextInput placeholder="Your name" label="Full name" withAsterisk />
+          <TextInput  withAsterisk />
         </div>
       </div>
       <div>
         <div>Name</div>
         <div>
         
-          <TextInput placeholder="Your name" label="Full name" withAsterisk />
+          <TextInput  withAsterisk />
         </div>
       </div>
+      </div>
+     
     </Modal>
   );
 }
