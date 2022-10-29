@@ -2,7 +2,7 @@
 
 
 width: 100%;
-
+cursor: pointer;
 
 }
 .InnerContainer{
@@ -10,7 +10,7 @@ display: flex;
 flex-wrap: wrap;
 border-radius: 10px;
 margin: 25px;
-background: #C8D7F4;
+background: #C8F5EE;
 max-height: 595px;
 padding-bottom: 25px;
 justify-content: center;

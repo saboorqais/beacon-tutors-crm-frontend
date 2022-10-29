@@ -342,3 +342,37 @@ button:disabled {
 .HeightGrow {
   max-height: 10000px;
 }
+.mantine-Modal-header{
+  background: #C4D3EE;
+  width: 100%;
+}
+.mantine-Modal-modal	{
+  padding: 0;
+  width: 100%;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 50.5px;
+}
+.mantine-Modal-title{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 33px;
+/* identical to box height */
+color: #061537;
+margin-left: 15px;
+margin-top: 7.5px;
+margin-bottom: 15px;
+}
+.mantine-Modal-close	{
+color: #061537;
+margin-right: 15px;
+margin-top: 7.5px;
+margin-bottom: 15px;
+
+}
+.mantine-Modal-close:hover{
+  background-color: #01121c;
+  color: #ffffff;
+}

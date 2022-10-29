@@ -92,3 +92,6 @@ color: #A0A0A1;
 .BottomIconWrapper{
     margin-left: 10px;
 }
+.Container{
+    width: 100%;
+}
