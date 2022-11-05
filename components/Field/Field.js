@@ -2,16 +2,20 @@ import React from "react";
 import DropDownMenu from "../DropdownMenu/DropDownMenu";
 import styles from "../Field/Field.module.css";
 
-export default function Field({ name, setopened, opened }) {
+export default function Field({ id,selected,name, setopened, opened ,data,setmodalData,key,setselectedId}) {
   return (
     <div className={styles.Field}>
       <div className={styles.newLabel}>
         <DropDownMenu />
       </div>
       <div
-      className={styles.Container}
+        className={styles.Container}
         onClick={() => {
+          console.log(id)
+          console.log(selected)
           setopened(!opened);
+          setmodalData(data)
+          setselectedId([id,selected])
         }}
       >
         <div className={styles.Heading}>{name}</div>

@@ -8,12 +8,11 @@ import { CSSTransition } from "react-transition-group";
 import { selectCloseState } from "./Reducers/CloseState";
 
 export function SidePanelList(props) {
-  const router = useRouter();
+ 
   const TabState = useSelector(selectTabState);
   const dispatch = useDispatch();
-  const nodeRef = useRef(null);
   const CloseState = useSelector(selectCloseState);
-  
+  console.log(props)
 
   return (
     <>

@@ -2,27 +2,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
 
-const CLOSE_BUTTON_STATUS = 'CLOSE_BUTTON_STATUS';
 const initialState = {
-  status: true,
+  payload: 1,
 };
-export const CloseSlice = createSlice({
-  name: "status",
+
+const CHANGE_PAGE_NUMBER="CHANGE_PAGE_NUMBER"
+export const PaginationSlice = createSlice({
+  name: "page",
   initialState,
   reducers: {
     // Action to set the authentication status
-    setCloseState(state, action) {
-      state.status = action.payload;
+    setPositiontate(state, action) {
+      state.payload = action.payload;
     },
 
     // Special reducer for hydrating the state. Special case for next-redux-wrapper
     extraReducers: {
       [HYDRATE]: (state = initialState, action) => {
         switch (action.type) {
-          case CLOSE_BUTTON_STATUS:
+          case CHANGE_PAGE_NUMBER:
             return Object.assign([], state, {
               payload: action.payload,
-              status: action.status,
             });
           default:
             return state;
@@ -33,8 +33,8 @@ export const CloseSlice = createSlice({
 });
 
 
-export const { setCloseState } = CloseSlice.actions;
+export const { setPositiontate } = PaginationSlice.actions;
 
-export const selectCloseState = (state) => state.status.status;
+export const selectPageState = (state) => state.page.payload;
 
-export default CloseSlice.reducer;
+export default PaginationSlice.reducer;

@@ -1,11 +1,89 @@
-.Container{
-    width: 100%;
-    margin-left: 40px ;
-    margin-right: 40px ;
+.Container {
+  width: 100%;
 }
-.InnerContainer{
-    display: flex;
+.InnerContainer {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
 }
-.InputContainer{
-    width: 100%;
+.InputContainer {
+  width: 100%;
+}
+.nameContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 300px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height */
+
+  color: #3a3a3b;
+}
+.ButtonContainer {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+.Button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+
+  height: 47px;
+
+  background: #ffffff;
+  border: 3px solid #c5d4ef;
+  border-radius: 8px;
+  flex: 0 0 33%;
+}
+.EndContainer{
+display: flex;
+gap: 15px ;
+width: 100%;
+padding-left: 40px;
+padding-right: 40px;
+margin-bottom: 30px;
+margin-top: 15px;
+}
+
+.MarkedButton{
+
+width: 100%;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 10px 25px;
+gap: 10px;
+background: #C3EAE5;
+border: 2px solid rgba(6, 21, 55, 0.25);
+border-radius: 8px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+color: #061537;
+
+}
+.DeleteButton{
+   background-color: #D41E34;
+   display: flex;
+flex-direction: row;
+align-items: center;
+padding: 13px;
+gap: 10px;
+
+width: 51px;
+height: 51px;
+cursor: pointer;
+background: #D41E34;
+border-radius: 8px 
 }

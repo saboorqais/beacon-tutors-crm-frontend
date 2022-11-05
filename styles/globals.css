@@ -17,10 +17,12 @@ body {
   overflow: hidden;
   transition: all 0.3s ease-in;
   font-family: "Poppins", sans-serif;
+
 }
 
 body > * {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 button {
@@ -342,16 +344,23 @@ button:disabled {
 .HeightGrow {
   max-height: 10000px;
 }
+.mantine-Modal-root{
+  z-index: 2000000;
+}
 .mantine-Modal-header{
-  background: #C4D3EE;
+ background: #C3EAE5;
   width: 100%;
+  border-radius: 18px 18px 0px 0px;
+  z-index: 2000000;
 }
 .mantine-Modal-modal	{
   padding: 0;
   width: 100%;
+  max-width: 1122px;
   margin-left: 250px;
-  margin-right: 250px;
+  margin-right:250px;
   margin-top: 50.5px;
+  z-index: 2000000;
 }
 .mantine-Modal-title{
   font-family: 'Poppins';
@@ -362,7 +371,7 @@ line-height: 33px;
 /* identical to box height */
 color: #061537;
 margin-left: 15px;
-margin-top: 7.5px;
+margin-top: 15px;
 margin-bottom: 15px;
 }
 .mantine-Modal-close	{
@@ -375,4 +384,28 @@ margin-bottom: 15px;
 .mantine-Modal-close:hover{
   background-color: #01121c;
   color: #ffffff;
+}
+.mantine-TextInput-wrapper{
+  background: #FFFFFF;
+border: 3px solid #C5D4EF;
+border-radius: 8px;
+width: 100%;
+}
+.mantine-TextInput-input{
+  border: 0px solid #C5D4EF; 
+}
+.mantine-Textarea-wrapper{
+  background: #FFFFFF;
+border: .2rem solid #C5EEE9;
+border-radius: 8px;
+width: 100%;
+}
+.mantine-Textarea-input{
+  border: 0px solid #C5EEE9; 
+}
+
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+  transition-delay: 3s;
 }

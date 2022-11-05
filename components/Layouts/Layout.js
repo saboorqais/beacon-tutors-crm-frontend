@@ -79,7 +79,7 @@ export default function Layout({ children }) {
         </div>
 
         <Nav />
-        {!(router.asPath === "/signin") && <MainContainer />}
+       
 
         <div className={styles.pageLayout}>
           <main>{children}</main>

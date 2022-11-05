@@ -1,9 +1,10 @@
 import React from 'react';
 import Layout from "../../components/Layouts/Layout";
+import MainContainer from '../../components/MainContainer/MainContainer';
 
 function ViewInquiries(props) {
     return (
-        <div>ViewInquiries</div>
+        <MainContainer/>
     );
 }
 

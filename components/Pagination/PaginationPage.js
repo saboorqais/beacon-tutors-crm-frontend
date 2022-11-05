@@ -9,25 +9,44 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { Pagination } from "@mantine/core";
 import { usePagination } from "@mantine/hooks";
+import { useSelect } from "@mui/base";
+import { selectInquiries } from "../Reducers/Inquiries";
+import { useDispatch, useSelector } from "react-redux";
+import { selectPageState, setPositiontate } from "../Reducers/Pagination";
+import { GetTotal } from "../Services/InquiriesService";
 // Example items, to simulate fetching from another resources.
-const items = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-  11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14.1, 2, 3, 4, 5,
-  6, 7, 8, 9, 10, 11, 12, 13, 14.1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
-  14.1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
-];
+const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4, ,];
 
 export default function PaginationPage({}) {
+  const Inquiries = useSelector(selectInquiries);
   const [activeState, setactiveState] = useState(1);
+  const [total, settotal] = useState();
   const onChange = (event) => {
-
     setactiveState(event);
-  }; // We start with an empty list of items.
-  const pagination = usePagination({ total: 10, items, onChange });
-
+  };
+  // We start with an empty list of items.
+  const dispatch = useDispatch();
+  const PageState = useSelector(selectPageState);
   useEffect(() => {
-    console.log(activeState);
-  }, [activeState]);
+   
+
+    const request = GetTotal();
+    request.then((res) => {
+      settotal(res.data.length);
+    });
+  }, [Inquiries, PageState]);
+
+  const pagination = usePagination({
+    total: Math.ceil(
+      parseInt(
+        total ? (total % 9 == 0 ? total / 9 : parseInt(total / 9) + 1) : 0
+      )
+    ),
+    Inquiries,
+    onChange,
+  });
+
+
 
   // Invoke when user click to request another page.
 
@@ -36,14 +55,17 @@ export default function PaginationPage({}) {
       <div className={styles.MainContainer}>
         <KeyboardDoubleArrowLeftIcon
           onClick={() => {
-            setactiveState(pagination.active);
             pagination.first();
+            console.log(pagination.range)
+            console.log(pagination.active)
+            dispatch(setPositiontate(pagination.active));
           }}
         />
         <KeyboardArrowLeftIcon
           onClick={() => {
-            setactiveState(pagination.active);
             pagination.previous();
+            console.log(pagination.range)
+            dispatch(setPositiontate(pagination.active));
           }}
         />
 
@@ -55,6 +77,7 @@ export default function PaginationPage({}) {
               onClick={() => {
                 pagination.setPage(value);
                 setactiveState(value);
+                dispatch(setPositiontate(value));
               }}
               className={`${styles.PaginateButton}  ${
                 activeState === value ? styles.Active : ""
@@ -67,16 +90,27 @@ export default function PaginationPage({}) {
 
         <KeyboardArrowRightIcon
           onClick={() => {
-            setactiveState(pagination.active);
+            console.log(pagination.active)
             pagination.next();
+            console.log(pagination.range[-1])
+            console.log(pagination.active)
+            
+            console.log(pagination.active)
+
+            dispatch(setPositiontate(pagination.active));
           }}
         />
+        <div>
         <KeyboardDoubleArrowRightIcon
           onClick={() => {
-            setactiveState(pagination.active);
             pagination.last();
+           
+            console.log(pagination.range)
+            dispatch(setPositiontate(pagination.active));
           }}
         />
+        </div>
+        
       </div>
     </div>
   );
