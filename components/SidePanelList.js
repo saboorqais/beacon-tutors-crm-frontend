@@ -54,9 +54,12 @@ export function SidePanelList(props) {
         {
           props.rawInquiry.map(({ href, title }) => (
             <>
-              <div style={{display: TabState === props.index? "flex":"none",
+              <a style={{display: TabState === props.index? "flex":"none",
+
             }}
-            
+            className="AnchorTag"
+            href={href}
+            title={title}
               >
                 <div className="IconSectionSidebarDropdown">
                   <Folder size={30} />
@@ -65,7 +68,7 @@ export function SidePanelList(props) {
                 
              
                 className="LabelSectionSidebar">{title}</div>
-              </div>
+              </a>
             </>
           ))}
       </div>

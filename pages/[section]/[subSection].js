@@ -1,14 +1,16 @@
 import React from 'react';
 import Layout from "../../components/Layouts/Layout";
 import {useRouter} from "next/router";
+import MainContainer from '../../components/MainContainer/MainContainer';
 
 function SubSection(props) {
 
     const router = useRouter()
-    const { subSection } = router.query
+    const { subSection,section } = router.query
+   
 
     return (
-        <div>This is Sub Section : {subSection}</div>
+      <MainContainer selectedSubSection={subSection} selectedSection={section}/> 
     );
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 import Nav from "../Nav/Nav";
 import { useRouter } from "next/router";
@@ -10,12 +10,16 @@ import {
 import MainContainer from "../MainContainer/MainContainer";
 import SideBarMenu from "../SideBarMenu/SideBarMenu";
 import ListContainer from "../ListContainer/ListContainer";
-import {  useSelector } from "react-redux";
+import {  useDispatch, useSelector } from "react-redux";
 import {
   selectCloseState,
 } from "../Reducers/CloseState";
 import styles from "../Layouts/Layout.module.css";
+import { selectLoadingState } from "../Reducers/Loading";
+import { selectPageState } from "../Reducers/Pagination";
+import { selectInquiries } from "../Reducers/Inquiries";
 export default function Layout({ children }) {
+ 
   const router = useRouter();
   const Pattern = dynamic(() =>
     import("../../assets/backgroundPattern.svg").then(

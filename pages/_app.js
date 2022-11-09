@@ -6,11 +6,7 @@ import SideBarTab from "../components/Reducers/SideBarTab";
 import { Provider } from "react-redux";
 import { wrapper } from "../components/Reducers";
 import React from "react";
-const store = configureStore({
-  reducer: {
-    Tabs: SideBarTab,
-  },
-});
+
 
 function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
@@ -44,9 +40,9 @@ function MyApp({ Component, pageProps }) {
         }}
       />
        <React.StrictMode>
-      <Provider store={store}>
+   
         <Component {...pageProps} />
-      </Provider>
+    
       </React.StrictMode>
     </>
   );

@@ -38,7 +38,7 @@ export const getAllInquiries = (id) => async (dispatch) => {
   const response = InquiriesService(id);
   response
     .then((res) => {
-      
+     
       dispatch(InquiriesSlice.actions.setAllInquiries(res.data));
       dispatch(LoadingSlice.actions.setLoadingState(false));
     })

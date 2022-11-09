@@ -22,20 +22,12 @@ export default function PaginationPage({}) {
   const [activeState, setactiveState] = useState(1);
   const [total, settotal] = useState();
   const onChange = (event) => {
+    console.log("Change run")
     setactiveState(event);
   };
   // We start with an empty list of items.
   const dispatch = useDispatch();
   const PageState = useSelector(selectPageState);
-  useEffect(() => {
-   
-
-    const request = GetTotal();
-    request.then((res) => {
-      settotal(res.data.length);
-    });
-  }, [Inquiries, PageState]);
-
   const pagination = usePagination({
     total: Math.ceil(
       parseInt(
@@ -43,8 +35,19 @@ export default function PaginationPage({}) {
       )
     ),
     Inquiries,
-    onChange,
+    setactiveState,
   });
+  console.log(PageState)
+  useEffect(() => {
+   
+    console.log("USeEffect")
+    const request = GetTotal();
+    request.then((res) => {
+      settotal(res.data.length);
+    });
+  }, [Inquiries, PageState,pagination.range]);
+
+ 
 
 
 
@@ -54,17 +57,23 @@ export default function PaginationPage({}) {
     <div className={styles.ContainerCenter}>
       <div className={styles.MainContainer}>
         <KeyboardDoubleArrowLeftIcon
+         style={{
+          color:" #17243A"
+        }}
           onClick={() => {
+          
             pagination.first();
-            console.log(pagination.range)
-            console.log(pagination.active)
-            dispatch(setPositiontate(pagination.active));
+    
+            dispatch(setPositiontate(pagination.range.at(0)));
           }}
         />
         <KeyboardArrowLeftIcon
+         style={{
+          color:" #17243A"
+        }}
           onClick={() => {
             pagination.previous();
-            console.log(pagination.range)
+            
             dispatch(setPositiontate(pagination.active));
           }}
         />
@@ -89,27 +98,31 @@ export default function PaginationPage({}) {
         )}
 
         <KeyboardArrowRightIcon
+        style={{
+          color:" #17243A"
+        }}
           onClick={() => {
             console.log(pagination.active)
             pagination.next();
-            console.log(pagination.range[-1])
-            console.log(pagination.active)
-            
+            console.log(pagination.range)
             console.log(pagination.active)
 
             dispatch(setPositiontate(pagination.active));
           }}
         />
-        <div>
+      
         <KeyboardDoubleArrowRightIcon
+         style={{
+          color:" #17243A"
+        }}
           onClick={() => {
-            pagination.last();
-           
+            pagination.last(); 
             console.log(pagination.range)
-            dispatch(setPositiontate(pagination.active));
+            console.log(pagination.active)
+            dispatch(setPositiontate(pagination.range.at(-1)));
           }}
         />
-        </div>
+    
         
       </div>
     </div>

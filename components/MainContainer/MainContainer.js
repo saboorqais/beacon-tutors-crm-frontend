@@ -1,6 +1,9 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import FieldContainer from "../FieldContainer/FieldContainer";
+import { HeaderMapping, MappingList } from "../ListContainer/ListContainer";
 import Loading from "../Loading/Loading";
 import styles from "../MainContainer/MainContainer.module.css";
 import PaginationPage from "../Pagination/PaginationPage";
@@ -8,44 +11,42 @@ import { getAllInquiries, selectInquiries } from "../Reducers/Inquiries";
 import { selectLoadingState, setLoadingState } from "../Reducers/Loading";
 import { selectPageState } from "../Reducers/Pagination";
 
-function MainContainer() {
+function MainContainer({ selectedSubSection, selectedSection }) {
   const Inquiries = useSelector(selectInquiries);
   const PageState = useSelector(selectPageState);
   const LoadingState = useSelector(selectLoadingState);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getAllInquiries(PageState))  
+    dispatch(getAllInquiries(PageState));
   }, [PageState]);
   {
     console.log(Inquiries);
+    console.log(selectedSubSection);
+    console.log(selectedSection);
   }
 
   return (
     <div className={styles.MainContainer}>
       <div className={styles.HeadingContainer}>
-        <div className={styles.Heading}>Demo Processing</div>
+        <div className={styles.Heading}>{HeaderMapping[selectedSection]}</div>
         <div className={styles.TabsHeading}>
-          <div className={`${styles.IndividualTab} TypographyTabs`}>
-            Demo Reminders/Calling
-          </div>
-          <div className={`${styles.IndividualTab} TypographyTabs`}>
-            Client Formalities
-          </div>
-          <div className={`${styles.IndividualTab} TypographyTabs`}>
-            T Formalities
-          </div>
-          <div className={`${styles.IndividualTab} TypographyTabs`}>
-            Day-1 Processing
-          </div>
-          <div className={`${styles.IndividualTab} TypographyTabs`}>
-            Day-2 Processing
-          </div>
-          <div className={`${styles.IndividualTab} TypographyTabs`}>
-            Extended Demo
-          </div>
-          <div className={`${styles.IndividualTab} TypographyTabs`}>
-            Client Reviewing
-          </div>
+          {MappingList[selectedSection]?.map((item) => (
+            <Link
+            href={item.href}
+            >
+            
+            <div className={`${styles.IndividualTab} TypographyTabs `}
+            style={{
+              backgroundColor:item.key===selectedSubSection?"#061537":"white",
+              color:item.key===selectedSubSection?"white":"black"
+            }}
+            >
+              {item.title}
+            </div>
+            </Link>
+          ))}
+
+   
         </div>
       </div>
       <FieldContainer />

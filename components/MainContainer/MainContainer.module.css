@@ -44,7 +44,8 @@ max-height: calc(100vh - 75px) !important;
   border-right: #ffffff;
 }
 .IndividualTab{
-    background: #17243A;
+  cursor:pointer;
+    background: white;
     border-radius: 11px;
     padding: 14px 25px;
     margin: 5px 10px ;
@@ -54,10 +55,13 @@ max-height: calc(100vh - 75px) !important;
     font-size: 13px;
     line-height: 20px;
     /* identical to box height */
-    color: #ffffff;
+    color: black;
     display: flex;
     align-items: center;
     text-align: center;
     border: 2px solid rgba(23, 36, 58, 0.25);
     }
-    
+    .IndividualTabActive{
+      background-color: #061537;
+      color: #ffffff;
+    }

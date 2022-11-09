@@ -8,7 +8,7 @@ function Section(props) {
     const { section } = router.query
     console.log(router.query)
     return (
-        <div>This is Section : {section}</div>
+        <div>This is Sectionxzc : {section}</div>
     );
 }
 
