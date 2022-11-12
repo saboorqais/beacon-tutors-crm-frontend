@@ -1,9 +1,13 @@
+import { MantineProvider } from '@mantine/core';
+import { NotificationsProvider } from '@mantine/notifications';
 import React from 'react';
 import Layout from "../../components/Layouts/Layout";
+import MainContainer from '../../components/MainContainer/MainContainer';
 
 function AddInquiry(props) {
-    return (
-        <div>AddInquiry</div>
+    return ( 
+            <MainContainer selectedSection={"addInquiry"}/>
+          
     );
 }
 

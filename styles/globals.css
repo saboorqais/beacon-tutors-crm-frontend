@@ -270,23 +270,8 @@ button:disabled {
 }
 
 
-.IconSectionSidebar {
-  margin-left: 22.5px;
-  margin-top: 22.5px;
-  margin-bottom: 22.5px;
-  margin-right: 22.5px;
-}
-.LabelSectionSidebar {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
-  width: 175px;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-}
+
+
 .DropdownSidebar {
   display: flex;
   align-items: center;
@@ -294,19 +279,8 @@ button:disabled {
   background-color: #01121c;
   cursor: pointer;
 }
-.DropDownSideBarArrow {
-  display: flex;
-  align-items: center;
-}
-.DropdownItems {
-  position: relative;
-  margin-top: 0px;
-  background-color: #17243a;
-  border-radius: 12px;
-  margin-left: 5px;
-  margin-right: 5px;
-  transition: all 0.3s ease-in-out;
-}
+
+
 .displayOFF {
   display: none;
 }
@@ -343,6 +317,12 @@ button:disabled {
   background-clip: padding-box;
   border-radius: 2rem;
   background-color: #384f76;
+}
+@media screen and (max-width:1024px) {
+  ::-webkit-scrollbar-thumb {
+    border: 0.566rem solid transparent;
+
+  }
 }
 
 .HeightChange {
@@ -394,16 +374,22 @@ margin-bottom: 15px;
 }
 .mantine-TextInput-wrapper{
   background: #FFFFFF;
-border: 3px solid #C5D4EF;
+border: 3px solid  #C6F0EB;;
 border-radius: 8px;
 width: 100%;
 }
+.mantine-TextInput-rightSection {
+ 
+  width: 100%;
+}
 .mantine-TextInput-input{
-  border: 0px solid #C5D4EF; 
+  border: 0px solid #4fc3b1;; 
+  width: 100%;
 }
 .mantine-Textarea-wrapper{
   background: #FFFFFF;
-border: .2rem solid #C5EEE9;
+border: .2rem solid #C6F0EB;;
+height: 113px;
 border-radius: 8px;
 width: 100%;
 }
@@ -415,4 +401,19 @@ width: 100%;
   opacity: 0;
   transition: opacity 700ms ease-out;
   transition-delay: 3s;
+}
+.MuiOutlinedInput-input{
+  border: 0rem solid #C6F0EB
+}
+.MuiTextField-root{
+  border: 0.2rem solid #C6F0EB;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  height: 47px; 
+  background: #FFFFFF;
+  border: 3px solid #C6F0EB;
+  border-radius: 8px;
 }

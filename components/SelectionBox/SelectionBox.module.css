@@ -1,0 +1,30 @@
+.MainContainer{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 15px;
+gap: 10px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+cursor: pointer;
+text-align: center;
+
+color: #01121C;
+
+width: 100%;
+height: 47px;
+
+background: #FFFFFF;
+border: 3px solid #C6F0EB;
+border-radius: 8px;
+}
+
+.SelectedChoice {
+    background: #C6F0EB;
+    border-radius: 8px;;
+    font-weight: 700;
+}

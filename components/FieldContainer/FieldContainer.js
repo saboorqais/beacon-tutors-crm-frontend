@@ -58,9 +58,9 @@ export default function FieldContainer() {
                 classNames={PopUpAnimations}
                 onExited={() => {
                   setinquiries(mockList);
-                  console.log(selectedId)
+                
                   const response = DeleteInquiry(selectedId[0]);
-                  console.log("dELTE RUN")
+             
                   response.then((res) => {
                     
                     const responseInquiry = InquiriesService(PageState);

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Addform from "../Addform/Addform";
 import FieldContainer from "../FieldContainer/FieldContainer";
 import { HeaderMapping, MappingList } from "../ListContainer/ListContainer";
 import Loading from "../Loading/Loading";
@@ -15,15 +16,12 @@ function MainContainer({ selectedSubSection, selectedSection }) {
   const Inquiries = useSelector(selectInquiries);
   const PageState = useSelector(selectPageState);
   const LoadingState = useSelector(selectLoadingState);
+  const router = useRouter();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllInquiries(PageState));
   }, [PageState]);
-  {
-    console.log(Inquiries);
-    console.log(selectedSubSection);
-    console.log(selectedSection);
-  }
+
 
   return (
     <div className={styles.MainContainer}>
@@ -31,26 +29,32 @@ function MainContainer({ selectedSubSection, selectedSection }) {
         <div className={styles.Heading}>{HeaderMapping[selectedSection]}</div>
         <div className={styles.TabsHeading}>
           {MappingList[selectedSection]?.map((item) => (
-            <Link
-            href={item.href}
-            >
-            
-            <div className={`${styles.IndividualTab} TypographyTabs `}
-            style={{
-              backgroundColor:item.key===selectedSubSection?"#061537":"white",
-              color:item.key===selectedSubSection?"white":"black"
-            }}
-            >
-              {item.title}
-            </div>
+            <Link href={item.href}>
+              <div
+                className={`${styles.IndividualTab} TypographyTabs `}
+                style={{
+                  backgroundColor:
+                    item.key === selectedSubSection ? "#061537" : "white",
+                  color: item.key === selectedSubSection ? "white" : "black",
+                }}
+              >
+                {item.title}
+              </div>
             </Link>
           ))}
-
-   
         </div>
       </div>
-      <FieldContainer />
-      <PaginationPage />
+      {router.asPath === "/addInquiry" ? (
+        
+          <Addform />
+        
+      ) : (
+        <>
+          <FieldContainer />
+          <PaginationPage />
+        </>
+      )}
+
       {LoadingState && <Loading loading={true} />}
     </div>
   );

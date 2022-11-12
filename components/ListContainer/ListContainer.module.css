@@ -1,6 +1,19 @@
-.ListContainer{
-    max-height: 87vh;
-    min-height: 87vh;
-    overflow: auto;
-    
-   }
+.ListContainer {
+  max-height: 87vh;
+  min-height: 87vh;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .Container {
+    display: flex;
+    flex-direction: row;
+    gap:10px
+  }
+  .ListContainer {
+    width: calc(100 - 170px);
+    max-height: 76px;
+    height: 76px;
+    min-height: 76px;
+  }
+}

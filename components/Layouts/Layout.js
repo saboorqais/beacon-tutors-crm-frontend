@@ -6,6 +6,7 @@ import {
   ChevronsLeft,
   Settings,
   LogOut,
+  Sidebar,
 } from "lucide-react";
 import MainContainer from "../MainContainer/MainContainer";
 import SideBarMenu from "../SideBarMenu/SideBarMenu";
@@ -18,6 +19,7 @@ import styles from "../Layouts/Layout.module.css";
 import { selectLoadingState } from "../Reducers/Loading";
 import { selectPageState } from "../Reducers/Pagination";
 import { selectInquiries } from "../Reducers/Inquiries";
+import SideBar from "../SideBar/SideBar";
 export default function Layout({ children }) {
  
   const router = useRouter();
@@ -25,49 +27,16 @@ export default function Layout({ children }) {
     import("../../assets/backgroundPattern.svg").then(
       (module) => module.ReactComponent
     )
-  );
+  )
+  const WebView = dynamic(() =>
+  import('react-device-detect').then((module) => module.BrowserView)
+);
   const CloseState = useSelector(selectCloseState);
   return (
     <div className={styles.mainContainer}>
       {!(router.asPath === "/signin") && (
         <div>
-          <aside
-            className={styles.sidebar}
-            style={{
-              width: CloseState === true ? "300px" : "75px",
-            }}
-          >
-            <div className={styles.CollapseButtonTop}>
-              <SideBarMenu
-                style={{
-                  width: CloseState === true ? "300px" : "75px",
-                }}
-                icon={<ChevronsLeft size={40} />}
-                title="Collapse"
-              />
-            </div>
-
-            <ListContainer />
-
-            <div
-              className={styles.CollapseButtonEnd}
-              style={{
-                width: CloseState === true ? "300px" : "75px",
-              }}
-            >
-              <div className={styles.EndButton}>
-                <SideBarMenu icon={<Settings size={40} />} title="Settings" />
-              </div>
-
-              <div className={`${styles.EndButton}`}>
-                <SideBarMenu
-                  icon={<LogOut size={40} />}
-                  action="Action"
-                  title="Logout"
-                />
-              </div>
-            </div>
-          </aside>
+          <SideBar/>
         </div>
       )}
 
@@ -86,7 +55,10 @@ export default function Layout({ children }) {
        
 
         <div className={styles.pageLayout}>
-          <main>{children}</main>
+          <main
+          style={{width:"100%" 
+       }}
+          >{children}</main>
         </div>
       </div>
     </div>

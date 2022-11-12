@@ -152,7 +152,8 @@ export const HeaderMapping = {
   "teacherLocating":"Demo Processing",
   "demoProcessing":"Demo Processing",
   "feeProcessing":"Fee Processing",
-  "rejected":"Rejected"
+  "rejected":"Rejected",
+  "addInquiry":"New Inquiry"
 }
 export const MappingList = {
   "rawInquiry":rawInquiry,
@@ -167,17 +168,22 @@ function ListContainer() {
   const router = useRouter();
   return (
     <div className={styles.ListContainer}>
-      <Link href={"/funded"}>
+    {/*   <Link href={"/funded"}>
         <a className={router.asPath === "/funded" && "selected"}>Funded</a>
-      </Link>
+      </Link> */}
+      <div 
+      className={styles.Container}
+      >
       {AllList.map((item, index) => (
      
-        <SidePanelList
-          rawInquiry={item[0]}
-          sectionName={item[1]}
-          index={index + 1}
-        />
-      ))}
+     <SidePanelList
+       rawInquiry={item[0]}
+       sectionName={item[1]}
+       index={index + 1}
+     />
+   ))}
+      </div>
+     
 
       
     </div>

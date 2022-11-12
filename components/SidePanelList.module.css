@@ -1,0 +1,80 @@
+.DropdownSidebar {
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-in;
+  background-color: #01121c;
+  cursor: pointer;
+  border: 2px solid #01121c;
+  border-radius: 10px;
+    
+  padding-right: 16px;
+}
+
+.IconSectionSidebar {
+  margin-left: 22.5px;
+  margin-top: 22.5px;
+  margin-bottom: 22.5px;
+  margin-right: 22.5px;
+}
+.LabelSectionSidebar {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  width: 175px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.DropDownSideBarArrow {
+  display: flex;
+  align-items: center;
+}
+.DropdownItems {
+  position: relative;
+  margin-top: 0px;
+  background-color: #17243a;
+  border-radius: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.AnchorTag:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.DisplayNone {
+  display: none;
+}
+
+.Display {
+  display: block;
+}
+.ActiveState{
+
+}
+@media only screen and (max-width: 1024px) {
+  .DropdownItems {
+    display: none;
+  }
+  .DropdownSidebar {
+    height: 48px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .ActiveState{
+    background: #17243a;
+    border: 2px solid #516b97;
+    border-radius: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .LabelSectionSidebar {
+    width: max-content;
+  }
+  .DropDownSideBarArrow {
+    display: none;
+  }
+}

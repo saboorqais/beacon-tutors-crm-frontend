@@ -27,4 +27,11 @@ const promise = await axios.delete(baseURL)
 }
 
 
+export  const  PostInquiry = async(payload)=>{
+    const baseURL =`http://localhost:3004/inquiries/`
+const promise = await axios.post(baseURL,payload)
+    return promise
+}
+
+
 

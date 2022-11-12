@@ -1,0 +1,147 @@
+.MainContainer{
+    width: 100%;
+    background-color: #ffffff;
+}
+.Container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #ffffff;
+   
+  }
+  .InnerContainer {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .ChoiceContainer{
+display: flex;
+width: 100%;
+gap: 10px;
+  }
+  .InputContainer {
+    width: 100%;
+  
+  }
+  .nameContainer {
+    display: flex;
+    
+    flex-wrap: nowrap;
+    width: 300px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+  
+    color: #3a3a3b;
+  }
+  .ButtonContainer {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+  }
+  .Button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+  
+    height: 47px;
+  
+    background: #ffffff;
+    border: 3px solid #c5d4ef;
+    border-radius: 8px;
+    flex: 0 0 33%;
+  }
+  .EndContainer{
+  display: flex;
+  gap: 15px ;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  }
+  
+  .MarkedButton{
+  
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px;
+  gap: 10px;
+  background: #C3EAE5;
+  border: 2px solid rgba(6, 21, 55, 0.25);
+  border-radius: 8px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #061537;
+  
+  }
+  .DeleteButton{
+     background-color: #D41E34;
+     display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 13px;
+  gap: 10px;
+  
+  width: 51px;
+  height: 51px;
+  cursor: pointer;
+  background: #D41E34;
+  border-radius: 8px 
+  } 
+  .CountryCode{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px 25px;
+gap: 10px;
+
+width: 87px;
+height: 47px;
+
+background: #C6F0EB;
+opacity: 0.75;
+box-shadow: 0px 1px 15px rgba(225, 221, 212, 0.25);
+border-radius: 8px 0px 0px 8px;
+  }
+
+  .ContainerCenter{
+    width: 100%;
+    display: flex;
+  
+   
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+    
+
+border-radius: 10px;
+    }
+
+    .EndButtonContainer{
+        height: 55px;
+background: #17243A;
+box-shadow: 55px 61px 33px rgba(0, 0, 0, 0.01), 31px 34px 28px rgba(0, 0, 0, 0.05), 14px 15px 20px rgba(0, 0, 0, 0.09), 3px 4px 11px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+display: flex;
+flex-direction: row;
+min-width:  253px;;
+justify-content: center;
+cursor: pointer;
+padding: 15px 25px;
+gap: 10px;  
+    }

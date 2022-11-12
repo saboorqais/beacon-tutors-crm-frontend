@@ -6,7 +6,9 @@ import SideBarTab from "../components/Reducers/SideBarTab";
 import { Provider } from "react-redux";
 import { wrapper } from "../components/Reducers";
 import React from "react";
-
+import { MantineProvider } from "@mantine/core";
+import { NotificationsProvider } from "@mantine/notifications";
+import { ToastContainer } from "react-toastify";
 
 function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
@@ -39,11 +41,16 @@ function MyApp({ Component, pageProps }) {
           },
         }}
       />
-       <React.StrictMode>
-   
-        <Component {...pageProps} />
-    
-      </React.StrictMode>
+
+  
+      
+          <React.StrictMode>
+         
+
+<Component {...pageProps} />
+
+          </React.StrictMode>
+      
     </>
   );
 }

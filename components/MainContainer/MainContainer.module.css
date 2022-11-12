@@ -1,5 +1,5 @@
 .MainContainer {
-  min-width: 100%;
+  min-width: 102%;
   height: 100vh;
 max-height: calc(100vh - 75px) !important;
   z-index: -100;
