@@ -20,6 +20,7 @@ import { selectLoadingState } from "../Reducers/Loading";
 import { selectPageState } from "../Reducers/Pagination";
 import { selectInquiries } from "../Reducers/Inquiries";
 import SideBar from "../SideBar/SideBar";
+import { Drawer } from "@mantine/core";
 export default function Layout({ children }) {
  
   const router = useRouter();
@@ -52,7 +53,7 @@ export default function Layout({ children }) {
         </div>
 
         <Nav />
-       
+   
 
         <div className={styles.pageLayout}>
           <main

@@ -11,7 +11,7 @@ function SideBarMenu(props) {
       className={` ${
         props.action
           ?props.action==="Action"? `${styles.Action} ${styles.ActionButton}`:` ${styles.ActionButton}`
-          : `${styles.CollapseButton}`
+          : ` ${styles.CollapseButton}`
       }`}
     >
       <div
@@ -24,10 +24,10 @@ function SideBarMenu(props) {
       </div>
       <div
         style={{
-          display: CloseState === true ? "block" : "none",
+          display: CloseState === true ? `${styles.Display}` : `${styles.NonDisplay}`,
           color: CloseState === true ? "#FFFFFF" : "none",
         }}
-        className={styles.CollapseText}
+        className={`${props.title==="Collapse"?`${styles.CollapseText}`:`${styles.NoCollapseText}`}`}
       >
         {props.title}
       </div>

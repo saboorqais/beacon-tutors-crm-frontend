@@ -14,8 +14,9 @@ function TextFields({type,setData,placeholder,Data}) {
   });
 
   return (
-    <div className={type==="Contact"?`${styles.ContactRow}`:`${styles.infoRow}`}>
-    {type==="Contact"||type==="Whatsapp"?<div className={styles.CountryCode}>+92</div>:""}
+    <div className={type==="Contact" || type==="Whatsapp"?`${styles.ContactRow}`:`${styles.infoRow}`}>
+       
+    {type==="Contact"|| type==="Whatsapp" ?<div className={styles.CountryCode}>+92</div>:""}
       <TextField
       onChange={(evnt)=>{
        setData({...Data,[type]: evnt.target.value})

@@ -95,3 +95,9 @@ color: #A0A0A1;
 .Container{
     width: 100%;
 }
+@media screen and (max-width:430px) {
+    .Field{
+        flex: 0 0 90%;
+        padding: 10px;
+    }    
+}

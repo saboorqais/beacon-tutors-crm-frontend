@@ -8,6 +8,7 @@ import { InquiriesSlice } from "./Inquiries";
 import Pagination, { PaginationSlice } from "./Pagination";
 import Loading from "../Loading/Loading";
 import { LoadingSlice } from "./Loading";
+import { CloseSliceIPAD } from "./IpadViewDrawer";
 
 
 
@@ -22,6 +23,7 @@ const makeStore = () =>
       [InquiriesSlice.name]:InquiriesSlice.reducer,
       [PaginationSlice.name]:PaginationSlice.reducer,
       [LoadingSlice.name]:LoadingSlice.reducer,
+      [CloseSliceIPAD.name]:CloseSliceIPAD.reducer
     },
   
     devTools: true,

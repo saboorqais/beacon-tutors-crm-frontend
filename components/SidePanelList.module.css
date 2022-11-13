@@ -6,7 +6,7 @@
   cursor: pointer;
   border: 2px solid #01121c;
   border-radius: 10px;
-    
+
   padding-right: 16px;
 }
 
@@ -68,8 +68,7 @@
     background: #17243a;
     border: 2px solid #516b97;
     border-radius: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
+  
   }
   .LabelSectionSidebar {
     width: max-content;
@@ -77,4 +76,9 @@
   .DropDownSideBarArrow {
     display: none;
   }
+}
+
+@media screen and (max-width:430px) {
+
+    
 }

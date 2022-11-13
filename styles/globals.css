@@ -417,3 +417,6 @@ width: 100%;
   border: 3px solid #C6F0EB;
   border-radius: 8px;
 }
+	.mantine-Drawer-drawer{
+  background: #01121C;
+}

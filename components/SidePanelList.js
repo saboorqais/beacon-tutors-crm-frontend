@@ -7,11 +7,13 @@ import { selectTabState, setTabState } from "./Reducers/SideBarTab";
 import { CSSTransition } from "react-transition-group";
 import { selectCloseState } from "./Reducers/CloseState";
 import styles from "../components/SidePanelList.module.css";
+import { selectState, setStateDrawerIPAD } from "./Reducers/IpadViewDrawer";
 export function SidePanelList(props) {
   const TabState = useSelector(selectTabState);
   const dispatch = useDispatch();
   const CloseState = useSelector(selectCloseState);
-
+  const drawerState = useSelector(selectState)
+console.log(drawerState)
   return (
     <>
       <div
@@ -19,8 +21,10 @@ export function SidePanelList(props) {
         onClick={() => {
           if (TabState === props.index) {
             dispatch(setTabState(0));
+            dispatch(setStateDrawerIPAD(!drawerState))
           } else {
             dispatch(setTabState(props.index));
+           dispatch(setStateDrawerIPAD(!drawerState))
           }
         }}
       >

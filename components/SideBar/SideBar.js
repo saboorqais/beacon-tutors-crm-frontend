@@ -9,9 +9,12 @@ import {
     LogOut,
   } from "lucide-react";
 import ListContainer from '../ListContainer/ListContainer'
+import { Drawer } from '@mantine/core'
+import DrawerSiderBar from '../Drawer/DrawerSideBar'
 function SideBar() {
     const CloseState = useSelector(selectCloseState)
   return (
+ 
     <div>
       <aside
             className={`${styles.sidebar} ${CloseState === true ?`${styles.width300}`: `${styles.width75}`}`}>
@@ -44,7 +47,9 @@ function SideBar() {
               </div>
             </div>
           </aside>
+          <DrawerSiderBar />
     </div>
+  
   )
 }
 
