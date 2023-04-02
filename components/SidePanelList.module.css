@@ -63,11 +63,13 @@
     height: 48px;
     margin-top: 8px;
     margin-bottom: 8px;
+
   }
   .ActiveState{
     background: #17243a;
     border: 2px solid #516b97;
     border-radius: 10px;
+   
   
   }
   .LabelSectionSidebar {

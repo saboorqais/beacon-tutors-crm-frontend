@@ -99,7 +99,7 @@ function Addform() {
       </div>
       <div className={styles.InnerContainer}>
         <div className={styles.nameContainer}>Contact</div>
-        <div className={styles.InputContainer}>
+        <div className={styles.InnerContainerNumber}>
           <TextFields
             Data={Data}
             setData={setData}
@@ -110,7 +110,7 @@ function Addform() {
       </div>
       <div className={styles.InnerContainer}>
         <div className={styles.nameContainer}>Whatsapp Number</div>
-        <div className={styles.InputContainer}>
+        <div className={styles.InnerContainerNumber}>
           <TextFields
             Data={Data}
             setData={setData}

@@ -45,50 +45,50 @@ function ModalView({
           <div className={styles.InnerContainer}>
             <div className={styles.nameContainer}>Name</div>
             <div className={styles.InputContainer}>
-              <InfoField value={data.name} />
+              <InfoField value={data.Name} />
             </div>
           </div>
           <div className={styles.InnerContainer}>
             <div className={styles.nameContainer}>City</div>
             <div className={styles.InputContainer}>
-              <InfoField value={data.city} />
+              <InfoField value={data.City} />
             </div>
           </div>
           <div className={styles.InnerContainer}>
             <div className={styles.nameContainer}>Email</div>
             <div className={styles.InputContainer}>
-              <InfoField value={data.email} />
+              <InfoField value={data.Email} />
             </div>
           </div>
           <div className={styles.InnerContainer}>
             <div className={styles.nameContainer}>Contact</div>
             <div className={styles.InputContainer}>
-              <InfoField value={data.contact} />
+              <InfoField value={data.Contact} />
             </div>
           </div>
           <div className={styles.InnerContainer}>
             <div className={styles.nameContainer}>Whatsapp Number</div>
             <div className={styles.InputContainer}>
-              <InfoField value={data.WhatsappNumber} />
+              <InfoField value={data.Whatsapp} />
             </div>
           </div>
           <div className={styles.InnerContainer}>
             <div className={styles.nameContainer}>Who are You</div>
             <div className={styles.InputContainer}>
-              <InfoField value={data.status} />
+              <InfoField value={data.Status} />
             </div>
           </div>
           <div className={styles.InnerContainer}>
             <div className={styles.nameContainer}>You Want to hire</div>
             <div className={styles.InputContainer}>
-              <InfoField value={data.hiring} />
+              <InfoField value={data.Hiring} />
             </div>
           </div>
 
           <div className={styles.InnerContainer}>
             <div className={styles.nameContainer}>Comments</div>
             <div className={styles.InputContainer}>
-              <InfoField value={data.comment} />
+              <InfoField value={data.Comments} />
             </div>
           </div>
           <div className={styles.EndContainer}>

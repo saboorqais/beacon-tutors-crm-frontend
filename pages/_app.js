@@ -42,15 +42,15 @@ function MyApp({ Component, pageProps }) {
         }}
       />
 
-  
-      
-          <React.StrictMode>
-         
 
-<Component {...pageProps} />
 
-          </React.StrictMode>
-      
+      <React.StrictMode>
+
+
+        <Component {...pageProps} />
+
+      </React.StrictMode>
+
     </>
   );
 }

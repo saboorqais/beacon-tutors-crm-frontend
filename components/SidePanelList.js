@@ -14,14 +14,15 @@ export function SidePanelList(props) {
   const dispatch = useDispatch();
   const CloseState = useSelector(selectCloseState);
   const drawerState = useSelector(selectState)
-console.log(props.index-1)
   return (
     <>
       <div
         className={`${styles.DropdownSidebar}  ${ TabState === props.index? `${styles.ActiveState}`:"" }     `}
         onClick={() => {
+          console.log(TabState)
+          console.log(props.index)
           if (TabState === props.index) {
-            dispatch(setTabState(0));
+            dispatch(setTabState(-1));
             dispatch(setStateDrawerIPAD(false))
           } else {
             dispatch(setTabState(props.index));
@@ -38,7 +39,7 @@ console.log(props.index-1)
           }}
           className={styles.LabelSectionSidebar}
         >
-          {props.sectionName}
+          {props.sectionName}s
         </div>
         <div
           style={{
