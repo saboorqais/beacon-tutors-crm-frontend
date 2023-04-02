@@ -14,7 +14,7 @@ export function SidePanelList(props) {
   const dispatch = useDispatch();
   const CloseState = useSelector(selectCloseState);
   const drawerState = useSelector(selectState)
-console.log(drawerState)
+console.log(props.index-1)
   return (
     <>
       <div

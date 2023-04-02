@@ -139,7 +139,7 @@ const rejected = [
     key: "notInterested",
   },
 ];
-const AllList = [
+export const AllList = [
   [add,"Add Inquiry"],
   [rawInquiry, "Raw Inquiry"],
   [requirementsGathering, "Requirements Gathering"],
@@ -178,7 +178,7 @@ function ListContainer() {
           <SidePanelList
             rawInquiry={item[0]}
             sectionName={item[1]}
-            index={index + 1}
+            index={index}
           />
         ))}
       </div>

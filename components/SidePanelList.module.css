@@ -16,17 +16,17 @@
   margin-bottom: 22.5px;
   margin-right: 22.5px;
 }
-.LabelSectionSidebar {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
-  width: 175px;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-}
+  .LabelSectionSidebar {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    width: 175px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
 .DropDownSideBarArrow {
   display: flex;
   align-items: center;
