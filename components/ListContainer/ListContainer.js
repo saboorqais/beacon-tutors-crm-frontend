@@ -1,7 +1,6 @@
 import { Link, LogOut } from "lucide-react";
 import { useRouter } from "next/router";
 import React from "react";
-import { Settings } from "tabler-icons-react";
 import styles from "../ListContainer/ListContainer.module.css";
 import SideBarMenu from "../SideBarMenu/SideBarMenu";
 import { SidePanelList } from "../SidePanelList";

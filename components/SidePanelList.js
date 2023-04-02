@@ -8,6 +8,7 @@ import { CSSTransition } from "react-transition-group";
 import { selectCloseState } from "./Reducers/CloseState";
 import styles from "../components/SidePanelList.module.css";
 import { selectState, setStateDrawerIPAD } from "./Reducers/IpadViewDrawer";
+import { TruckDelivery } from "tabler-icons-react";
 export function SidePanelList(props) {
   const TabState = useSelector(selectTabState);
   const dispatch = useDispatch();
@@ -21,10 +22,10 @@ console.log(drawerState)
         onClick={() => {
           if (TabState === props.index) {
             dispatch(setTabState(0));
-            dispatch(setStateDrawerIPAD(!drawerState))
+            dispatch(setStateDrawerIPAD(false))
           } else {
             dispatch(setTabState(props.index));
-           dispatch(setStateDrawerIPAD(!drawerState))
+           dispatch(setStateDrawerIPAD(true))
           }
         }}
       >

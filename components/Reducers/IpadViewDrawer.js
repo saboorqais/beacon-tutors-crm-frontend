@@ -12,6 +12,7 @@ export const CloseSliceIPAD = createSlice({
   reducers: {
     // Action to set the authentication status
     setStateDrawerIPAD(state, action) {
+      console.log(state)
       state.status = action.payload;
     },
 

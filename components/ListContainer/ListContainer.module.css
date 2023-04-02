@@ -1,6 +1,5 @@
 .ListContainer {
-  max-height: 87vh;
-  min-height: 84vh;
+  flex:2;
   overflow: auto;
 }
 

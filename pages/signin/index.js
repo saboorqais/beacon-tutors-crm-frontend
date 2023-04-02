@@ -22,18 +22,18 @@ function SignIn(props) {
     const [inputType, setInputType] = useState('password');
     const [isDisabled, setIsDisabled] = useState(false);
 
-    useEffect(() => {
+  /*   useEffect(() => {
         onAuthStateChanged(auth, (user_) => {
             setUser(user_);
             user_ && router.push('/');
         });
     }, [user]);
-
+ */
     const showPassword = () => {
         inputType === 'password' ? setInputType('text') : setInputType('password');
     };
 
-    const signInHandler = async (e) => {
+  /*   const signInHandler = async (e) => {
         e.preventDefault();
         if (email === '' || password === '') toast.error('Missing credentials');
         else {
@@ -62,56 +62,56 @@ function SignIn(props) {
             }
             setIsDisabled(false);
         }
-    };
+    }; */
 
 
     return (
         <>
-         <Head>
-          <title>Sign In - Beacon Tutors CRM</title>
-          <meta name="description" content="Admin Sign In page" />
-        </Head>
-        <div className={styles.container}>
-            <div className={styles.formContainer}>
-          <div className={styles.signIn}>
-            <h2>Sign In</h2>
-            <form onSubmit={signInHandler}>
-              <input
-                  className="adminInput"
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-              />
-              <div className={styles.password}>
-                <input
-                    className="adminInput"
-                    type={inputType}
-                    name="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <div className={styles.eye} onClick={showPassword}>
-                  {inputType === 'password' ? (
-                      <EyeOff color="#C5C8CE" />
-                  ) : (
-                      <Eye color="#C5C8CE" />
-                  )}
+            <Head>
+                <title>Sign In - Beacon Tutors CRM</title>
+                <meta name="description" content="Admin Sign In page" />
+            </Head>
+            <div className={styles.container}>
+                <div className={styles.formContainer}>
+                    <div className={styles.signIn}>
+                        <h2>Sign In</h2>
+                        <form >
+                            <input
+                                className="adminInput"
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <div className={styles.password}>
+                                <input
+                                    className="adminInput"
+                                    type={inputType}
+                                    name="password"
+                                    placeholder="Password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                />
+                                <div className={styles.eye} onClick={showPassword}>
+                                    {inputType === 'password' ? (
+                                        <EyeOff color="#C5C8CE" />
+                                    ) : (
+                                        <Eye color="#C5C8CE" />
+                                    )}
+                                </div>
+                            </div>
+                            <button
+                                type="submit"
+                                className="adminButton"
+                                disabled={isDisabled}
+                            >
+                                Sign In
+                            </button>
+                        </form>
+                    </div>
                 </div>
-              </div>
-              <button
-                  type="submit"
-                  className="adminButton"
-                  disabled={isDisabled}
-              >
-                Sign In
-              </button>
-            </form>
-          </div>
-                </div>
-        </div>
+            </div>
         </>
     );
 }

@@ -36,9 +36,9 @@ export default function Layout({ children }) {
   return (
     <div className={styles.mainContainer}>
       {!(router.asPath === "/signin") && (
-        <div>
+      
           <SideBar/>
-        </div>
+      
       )}
 
       <div

@@ -17,6 +17,7 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.10",
     "@next/bundle-analyzer": "^12.3.1",
+    "@react-hook/media-query": "^1.1.1",
     "@reduxjs/toolkit": "^1.8.6",
     "@svgr/webpack": "^6.4.0",
     "@tabler/icons": "^1.103.0",
@@ -35,6 +36,7 @@
     "react-toastify": "^9.1.1",
     "react-transition-group": "^4.4.5",
     "sass": "^1.55.0",
+    "tabler-icons-react": "^1.56.0",
     "url-loader": "^4.1.1"
   },
   "devDependencies": {

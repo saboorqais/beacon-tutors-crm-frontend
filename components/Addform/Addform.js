@@ -16,16 +16,6 @@ function Addform() {
   const [hiring, sethiring] = useState();
   const [city, setcity] = useState();
   const [Data, setData] = useState({});
-  const data = {
-    name: "saboor",
-    city: "Lahore",
-    email: "saboor",
-    contact: "03940243",
-    WhatsappNumber: "327649832643",
-    status: "online",
-    comment: "skadjak",
-    hiring: "Slut",
-  };
   console.log(Data);
   const save = async () => {
     const Payload = {

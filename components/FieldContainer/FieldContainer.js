@@ -47,6 +47,7 @@ export default function FieldContainer() {
         {inquiries &&
           bool &&
           inquiries.map((item, index) => {
+            console.log(item)
             return (
               <CSSTransition
                 
@@ -84,7 +85,7 @@ export default function FieldContainer() {
                   id={item.id}
                   selected={index}
                   data={item}
-                  name={item.name}
+                  name={item.Name}
                   setopened={setopened}
                   opened={opened}
                   setmodalData={setmodalData}
