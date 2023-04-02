@@ -7,7 +7,7 @@ import FieldContainer from "../FieldContainer/FieldContainer";
 import { HeaderMapping, MappingList } from "../ListContainer/ListContainer";
 import Loading from "../Loading/Loading";
 import styles from "../MainContainer/MainContainer.module.css";
-import PaginationPage from "../Pagination/PaginationPage";
+import PaginationPage from "../PaginationPage/PaginationPage";
 import { getAllInquiries, selectInquiries } from "../Reducers/Inquiries";
 import { selectLoadingState, setLoadingState } from "../Reducers/Loading";
 import { selectPageState } from "../Reducers/Pagination";

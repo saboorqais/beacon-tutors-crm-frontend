@@ -15,7 +15,7 @@ import {  useDispatch, useSelector } from "react-redux";
 import {
   selectCloseState,
 } from "../Reducers/CloseState";
-import styles from "../Layouts/Layout.module.css";
+import styles from "../Layout/Layout.module.css";
 import { selectLoadingState } from "../Reducers/Loading";
 import { selectPageState } from "../Reducers/Pagination";
 import { selectInquiries } from "../Reducers/Inquiries";
