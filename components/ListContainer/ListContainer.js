@@ -110,6 +110,13 @@ const feeProcessing = [
     key: "delayed",
   },
 ];
+const add=[
+  {
+    href: "/addInquiry",
+    title: "Add Inquiry",
+    key: "addInquiry",
+  }
+]
 const rejected = [
   {
     href: "/rejected/lowBudget",
@@ -133,6 +140,7 @@ const rejected = [
   },
 ];
 const AllList = [
+  [add,"Add Inquiry"],
   [rawInquiry, "Raw Inquiry"],
   [requirementsGathering, "Requirements Gathering"],
   [teacherLocating, "Demo Processing"],

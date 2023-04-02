@@ -11,8 +11,10 @@ import {
 import ListContainer from '../ListContainer/ListContainer'
 import { Drawer } from '@mantine/core'
 import DrawerSiderBar from '../Drawer/DrawerSideBar'
+import { useRouter } from 'next/router'
 function SideBar() {
   const CloseState = useSelector(selectCloseState)
+  const router = useRouter();
   return (
 
     <>
@@ -30,7 +32,7 @@ function SideBar() {
       
 
         <div
-          className={`${styles.CollapseButtonEnd} ${CloseState === true ? `${styles.widthIcon300}` : `${styles.widthIcon75}`}`}
+          className={`${styles.CollapseButtonEnd}`}
 
         >
           <div className={styles.EndButton}>
@@ -39,7 +41,11 @@ function SideBar() {
               title="Settings" />
           </div>
 
-          <div className={`${styles.EndButton}`}>
+          <div className={`${styles.EndButton}`}
+          onClick={()=>{
+            router.push("/signin")
+          }}
+          >
             <SideBarMenu
               icon={<LogOut size={40} />}
               action="Action"

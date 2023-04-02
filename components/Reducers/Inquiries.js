@@ -35,16 +35,139 @@ export const InquiriesSlice = createSlice({
 
 export const getAllInquiries = (id) => async (dispatch) => {
   dispatch(LoadingSlice.actions.setLoadingState(true));
-  const response = InquiriesService(id);
+  const data=[
+    {
+      "id": 1,
+      "Name": "Abdul saboor",
+      "Whatsapp": "+923184536655",
+      "City": "Lahore",
+      "Contact": "+923184536655",
+      "Email": "saboor.qaiser456@gmail.com",
+      "Hiring": "Online Tutor",
+      "Comments": "Hey"
+    },
+    {
+      "id": 2,
+      "Name": "Abdul saboor",
+      "Whatsapp": "+923184536655",
+      "City": "Lahore",
+      "Contact": "+923184536655",
+      "Email": "saboor.qaiser456@gmail.com",
+      "Hiring": "Online Tutor",
+      "Comments": "Hey"
+    },
+    {
+      "id": 3,
+      "Name": "Abdul saboor",
+      "Whatsapp": "+923184536655",
+      "City": "Lahore",
+      "Contact": "+923184536655",
+      "Email": "saboor.qaiser456@gmail.com",
+      "Hiring": "Online Tutor",
+      "Comments": "Hey"
+    },
+    {
+      "id": 4,
+      "Name": "Abdul saboor",
+      "Whatsapp": "+923184536655",
+      "City": "Lahore",
+      "Contact": "+923184536655",
+      "Email": "saboor.qaiser456@gmail.com",
+      "Hiring": "Online Tutor",
+      "Comments": "Hey"
+    },
+    {
+      "id": 5,
+      "Name": "Abdul saboor",
+      "Whatsapp": "+923184536655",
+      "City": "Lahore",
+      "Contact": "+923184536655",
+      "Email": "saboor.qaiser456@gmail.com",
+      "Hiring": "Online Tutor",
+      "Comments": "Hey"
+    },
+    {
+      "id": 6,
+      "Name": "Abdul saboor",
+      "Whatsapp": "+923184536655",
+      "City": "Lahore",
+      "Contact": "+923184536655",
+      "Email": "saboor.qaiser456@gmail.com",
+      "Hiring": "Online Tutor",
+      "Comments": "Hey"
+    },
+    {
+      "id": 7,
+      "Name": "Abdul saboor",
+      "Whatsapp": "+923184536655",
+      "City": "Lahore",
+      "Contact": "+923184536655",
+      "Email": "saboor.qaiser456@gmail.com",
+      "Hiring": "Online Tutor",
+      "Comments": "Hey"
+    },
+    {
+      "id": 8,
+      "Name": "Abdul saboor",
+      "Whatsapp": "+923184536655",
+      "City": "Lahore",
+      "Contact": "+923184536655",
+      "Email": "saboor.qaiser456@gmail.com",
+      "Hiring": "Online Tutor",
+      "Comments": "Hey"
+    },
+    {
+      "id": 10,
+      "Name": "Abdul saboor",
+      "Whatsapp": "+923184536655",
+      "City": "Lahore",
+      "Contact": "+923184536655",
+      "Email": "saboor.qaiser456@gmail.com",
+      "Hiring": "Online Tutor",
+      "Comments": "Hey"
+    },
+    {
+      "id": 11,
+      "Name": "Abdul saboor",
+      "Whatsapp": "+923184536655",
+      "City": "Lahore",
+      "Contact": "+923184536655",
+      "Email": "saboor.qaiser456@gmail.com",
+      "Hiring": "Online Tutor",
+      "Comments": "Hey"
+    }
+  ]
+  function createMockPromise(result, delay) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (result) {
+          resolve(result);
+        } else {
+          reject('Error: No result provided');
+        }
+      }, delay || 0);
+    });
+  }
+  const myPromise = createMockPromise('Hello, World!', 2000);
+
+myPromise.then(result => {
+  dispatch(InquiriesSlice.actions.setAllInquiries(data));
+  dispatch(LoadingSlice.actions.setLoadingState(false));
+  // Output: Hello, World!
+}).catch(error => {
+  console.error(error); // Output: Error: No result provided
+});
+/*   const response = InquiriesService(id);
   response
     .then((res) => {
+      
      
       dispatch(InquiriesSlice.actions.setAllInquiries(res.data));
       dispatch(LoadingSlice.actions.setLoadingState(false));
     })
     .catch((res) => {
       
-    });
+    }); */
 };
 
 export const selectInquiries = (state) => state.Inquiries.payload;

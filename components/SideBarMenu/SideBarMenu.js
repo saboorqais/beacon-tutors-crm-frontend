@@ -8,16 +8,16 @@ function SideBarMenu(props) {
   console.log(CloseState);
   return (
     <div
-      className={` ${
-        props.action
-          ?props.action==="Action"? `${styles.Action} ${styles.ActionButton}`:` ${styles.ActionButton}`
+      className={` ${props.action
+          ? props.action === "Action" ? `${styles.Action} ${styles.ActionButton}` : ` ${styles.ActionButton}`
           : ` ${styles.CollapseButton}`
-      }`}
+        }`}
     >
       <div
         className={styles.ChevronsLeft}
         onClick={() => {
-          dispatch(setCloseState(!CloseState));
+          props.action === "Action" ? "" :
+            dispatch(setCloseState(!CloseState))
         }}
       >
         {props.icon}
@@ -27,7 +27,7 @@ function SideBarMenu(props) {
           display: CloseState === true ? `${styles.Display}` : `${styles.NonDisplay}`,
           color: CloseState === true ? "#FFFFFF" : "none",
         }}
-        className={`${props.title==="Collapse"?`${styles.CollapseText}`:`${styles.NoCollapseText}`}`}
+        className={`${props.title === "Collapse" ? `${styles.CollapseText}` : `${styles.NoCollapseText}`}`}
       >
         {props.title}
       </div>
