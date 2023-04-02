@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import ListContainer from '../ListContainer/ListContainer'
 import { Drawer } from '@mantine/core'
-import DrawerSiderBar from '../Drawer/DrawerSideBar'
+import DrawerSiderBar from '../DrawerSiderBar/DrawerSideBar'
 import { useRouter } from 'next/router'
 function SideBar() {
   const CloseState = useSelector(selectCloseState)

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { Eye, EyeOff } from 'lucide-react';
 import styles from '../../styles/SignIn.module.css';
-import Layout from '../../components/Layouts/Layout';
+import Layout from '../../components/Layout/Layout';
 import toast from 'react-hot-toast';
 import { auth } from '../../firebase';
 import {
