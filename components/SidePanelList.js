@@ -39,7 +39,7 @@ export function SidePanelList(props) {
           }}
           className={styles.LabelSectionSidebar}
         >
-          {props.sectionName}s
+          {props.sectionName}
         </div>
         <div
           style={{
