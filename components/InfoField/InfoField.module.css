@@ -1,0 +1,93 @@
+.inquiry {
+    cursor: pointer;
+  }
+  
+  .row,
+  .infoRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .infoRow {
+    align-items: center;
+  }
+  
+  .row > *,
+  .infoRow > * {
+    margin: 0;
+  }
+  
+  .name {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #3a3a3b;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    color: #4fc3b1;
+    font-size: 0.7rem;
+  }
+  
+  .icon p {
+    margin: 0;
+    margin-top: 2px;
+  }
+  
+  .icon > * {
+    stroke-width: 4;
+    margin-right: 0.125rem;
+  }
+  
+  .timeAgo {
+    font-size: 0.75rem;
+    color: #a0a0a1;
+    margin: 0;
+  }
+  
+  .label {
+    color: #3a3a3b;
+    font-weight: 600;
+    width: 15rem;
+    margin: 0.5rem 0;
+  }
+  
+  .value {
+background: #FFFFFF;
+border: .2rem solid #C5EEE9;
+border-radius: 8px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+color: #777777;
+    
+    width: 100%;
+    margin: 0.4rem 0;
+  }
+  
+  .value p {
+    margin: 0.4rem 0;
+    padding: 0 0.7rem;
+  }
+  
+  .values .value:not(:last-child) {
+    margin-right: 0.6rem;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .infoRow {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  
+    .label {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+  

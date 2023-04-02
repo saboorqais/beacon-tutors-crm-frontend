@@ -1,0 +1,20 @@
+.Container{
+
+
+width: 100%;
+cursor: pointer;
+
+}
+.InnerContainer{
+display: flex;
+flex-wrap: wrap;
+align-items: flex-start;
+border-radius: 10px;
+margin: 25px;
+background: #C8F5EE;
+padding-bottom: 25px;
+justify-content: center;
+
+
+}
+

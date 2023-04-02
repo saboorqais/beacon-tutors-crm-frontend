@@ -1,0 +1,152 @@
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+   
+  }
+  
+  .LeftOverFlex {
+    width: 100%;
+    height: 100%;
+  }
+.sidebar {
+    color: #ffffff;
+    background-color: #01121c;  
+    max-height: 100vh;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    z-index: 10000000000;
+  }
+  @media  only screen and (max-width:1024px){
+    .sidebar{
+        width: 100%;
+        max-height: 76px;
+        position: absolute;
+        bottom: 0;
+        flex-direction: row;
+        
+    }
+
+
+}
+  .CollapseButtonTop {
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+  
+  .CollapseButtonEnd {
+    height: 75px;
+    background-color: #101928;
+
+    bottom: 0;
+    display: flex;
+    height: 150px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px -160px 45px rgba(3, 3, 3, 0.01),
+      0px -102px 41px rgba(3, 3, 3, 0.08), 0px -57px 34px rgba(3, 3, 3, 0.28),
+      0px -26px 26px rgba(3, 3, 3, 0.47), 0px -6px 14px rgba(3, 3, 3, 0.55),
+      0px 0px 0px rgba(3, 3, 3, 0.56);
+    transition: all 0.3s ease-in-out;
+    
+  }
+  @media  only screen and (max-width:1024px){
+    .CollapseButtonEnd{
+      
+    
+      flex-direction: row;
+      filter: drop-shadow(-164px 0px 46px rgba(3, 3, 3, 0.01)) drop-shadow(-105px 0px 42px rgba(3, 3, 3, 0.08)) drop-shadow(-59px 0px 35px rgba(3, 3, 3, 0.28)) drop-shadow(-26px 0px 26px rgba(3, 3, 3, 0.47)) drop-shadow(-7px 0px 14px rgba(3, 3, 3, 0.55)) drop-shadow(0px 0px 0px rgba(3, 3, 3, 0.56));
+
+    }
+
+
+}
+  .EndButton {
+    height: 150px;
+    width: 100%;
+  }
+  
+  .SignInContainer{
+      width: 100%;
+    }
+  
+    .background {
+      position: fixed;
+      min-height: 100%;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+    .background > * {
+      position: fixed;
+      width: 100%  !important;
+      height: 100%;
+      opacity: 0.15;
+    }
+  
+    .pageLayout{
+      display: flex;
+      margin-top: 0px;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      
+     
+    }
+
+
+    .width300{
+        width: 300px;
+    }
+    .width75{
+        width: 75px;
+    }
+    .widthIcon300{
+        width: 300px;
+    }
+    .widthIcon75{
+        width: 75px;
+    }
+
+
+    @media  only screen and (max-width:1024px){
+      .EndButton {
+        height: 150px;
+        width: 85px;
+      }
+        .width300{
+            width: 100%;
+        }
+        .width75{
+            width: 100%;
+        }
+        .widthIcon300{
+            width: 170px;
+        }
+        .widthIcon75{
+            width: 85px;
+        }
+    }
+    @media only screen and (max-width:430px) {
+      .widthIcon300{
+        width: 355px;
+    }
+    .EndButton {
+     
+      width: 100%;
+
+    }
+    .CollapseButtonTop {
+      
+      width: 75px;
+    }
+    .CollapseButtonEnd{
+      
+      
+      filter:none;
+    }
+
+    }
+ 

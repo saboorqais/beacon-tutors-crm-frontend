@@ -1,0 +1,99 @@
+.CollapseButton{
+        height: 75px;
+    background-color: #101928;
+    display: flex;
+    align-items: center;
+  }
+
+.ActionButton{
+  height: 75px;
+  background-color: #101928;
+  display: flex;
+  align-items: center;
+}
+.Display{
+  display: block;
+}
+.NonDisplay{
+  display: none;
+}
+
+  .ChevronsLeft{
+display: flex;
+align-items: center;
+justify-content: center;
+  display: flex;
+  cursor: pointer;
+  margin: 10px;
+  }
+  .CollapseText{
+  margin-left: 41px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  width: 225px;
+  transition: color .9s ease-in-out;
+  }
+  .NoCollapseText{
+    margin-left: 41px;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    width: 225px;
+    transition: color .9s ease-in-out;
+    }
+  .Action{
+    background-color: #AC1C36;
+   }
+
+   @media screen and (max-width:1024px) {
+.CollapseButton{
+  display: none;
+}
+
+    
+   }
+   @media only screen and (max-width:430px){
+    .CollapseText,.NoCollapseText {
+   margin-left: 0px;
+  max-width: fit-content;
+  width: fit-content;
+
+    }
+    .CollapseText{
+      display:none
+      
+    }
+    .CollapseButton{
+      display: flex;
+    
+    }
+   }
+   
+      
+   @media only screen and (max-width:390px) {
+
+    .CollapseText{
+      display:none
+      
+    }
+
+  }
+  
+  @media screen and (max-width:351px) {
+    .CollapseText,.NoCollapseText{
+      display:none
+      
+    }
+    .ActionButton{
+      justify-content: center;
+    }
+  }

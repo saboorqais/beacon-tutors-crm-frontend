@@ -1,0 +1,71 @@
+.Paginate{
+    display: flex;
+    background-color: rgb(143, 141, 137);
+    flex-direction: row;
+}
+.MainContainer{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+height: 45px;
+min-width: 409px;
+gap: 20px;
+background: #FFFFFF;
+box-shadow: 0px 48px 19px rgba(23, 36, 58, 0.01), 0px 27px 16px rgba(23, 36, 58, 0.04), 0px 12px 12px rgba(23, 36, 58, 0.07), 0px 3px 7px rgba(23, 36, 58, 0.08), 0px 0px 0px rgba(23, 36, 58, 0.08);
+border-radius: 50px;
+max-width: 500px;
+list-style: none;
+
+}
+.PaginateButton{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+cursor: pointer;
+color: rgba(6, 21, 55, 0.5);
+transition: all .3s ease-in-out;
+}
+.Active{
+    /* Auto layout */
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 2px 8px;
+gap: 10px;
+color: #FFFFFF;
+width: 25px;
+height: 25px;
+
+background: #17243A;
+border-radius: 50px;
+}
+.PaginateContainer{
+    display: flex;
+align-items: center;
+margin:1rem;
+    gap: 20px;
+   
+    list-style: none;
+    cursor: pointer;
+}
+.PagingContainer{
+    display: flex;
+    align-items: center;
+    
+}
+.ContainerCenter{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: baseline;
+height: 150px;
+}

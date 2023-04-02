@@ -1,0 +1,24 @@
+.ListContainer {
+  flex:2;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+  .Container {
+    display: flex;
+    flex-direction: row;
+    gap:10px
+  }
+  .ListContainer {
+    width: calc(100 - 170px);
+    max-height: 76px;
+    height: 76px;
+    min-height: 76px;
+  }
+}
+@media only screen and  (max-width:430px){
+    .Container {
+        display: none;
+      }
+}

@@ -1,23 +1,28 @@
-html{
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;600&display=swap");
+html {
+  transition: all 0.3s ease-in-out;
   padding: 0;
   margin: 0;
   position: relative;
-  height: fit-content;
-  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 
-body{
+body {
   padding: 0;
   margin: 0;
   position: inherit;
-  height: inherit;
-  min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  font-family: "Poppins", sans-serif;
+
 }
 
 body > * {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 button {
@@ -25,13 +30,19 @@ button {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+/*temporary for showing selected item in side panel*/
+.selected {
+  background: black;
+  color: white;
 }
 
 input,
 textarea,
 select {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 input::-ms-reveal,
@@ -57,20 +68,6 @@ a {
 /*    background: black;*/
 /*  }*/
 /*}*/
-
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: #ffffff;
-}
-.background > * {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0.15;
-}
 
 /* Admin panel global styles */
 
@@ -161,7 +158,7 @@ a {
 }
 
 .adminButton:hover {
-  background-color: #17243A;
+  background-color: #17243a;
 }
 
 .adminButton:active,
@@ -258,4 +255,168 @@ button:disabled,
 button:disabled {
   opacity: 0.85;
   transition: opacity 0.3s;
+}
+
+.IconSectionSidebarDropdown {
+
+  margin-left: 18.5px;
+  margin-top: 22.5px;
+  margin-bottom: 22.5px;
+  margin-right: 22.5px;
+}
+.AnchorTag:hover{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+
+
+
+.DropdownSidebar {
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-in;
+  background-color: #01121c;
+  cursor: pointer;
+}
+
+
+.displayOFF {
+  display: none;
+}
+.displayON {
+  display: block;
+  transform: scaleY(1);
+}
+
+.mainContainer {
+  display: flex;
+}
+
+.ListContainer {
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.Normal {
+  background-color: #101928;
+}
+
+.MarginIcon {
+  padding-left: 26.5px;
+  padding-bottom: 26.5px;
+  padding-top: 26.5px;
+}
+
+::-webkit-scrollbar {
+  width: 1.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 0.44rem solid transparent;
+  background-clip: padding-box;
+  border-radius: 2rem;
+  background-color: #384f76;
+}
+@media screen and (max-width:1024px) {
+  ::-webkit-scrollbar-thumb {
+    border: 0.566rem solid transparent;
+
+  }
+}
+
+.HeightChange {
+  height: 0px;
+}
+.HeightGrow {
+  max-height: 10000px;
+}
+.mantine-Modal-root{
+  z-index: 2000000;
+}
+.mantine-Modal-header{
+ background: #C3EAE5;
+  width: 100%;
+  border-radius: 18px 18px 0px 0px;
+  z-index: 2000000;
+}
+.mantine-Modal-modal	{
+  padding: 0;
+  width: 100%;
+  max-width: 1122px;
+  margin-left: 250px;
+  margin-right:250px;
+  margin-top: 50.5px;
+  z-index: 2000000;
+}
+.mantine-Modal-title{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 33px;
+/* identical to box height */
+color: #061537;
+margin-left: 15px;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+.mantine-Modal-close	{
+color: #061537;
+margin-right: 15px;
+margin-top: 7.5px;
+margin-bottom: 15px;
+
+}
+.mantine-Modal-close:hover{
+  background-color: #01121c;
+  color: #ffffff;
+}
+.mantine-TextInput-wrapper{
+  background: #FFFFFF;
+border: 3px solid  #C6F0EB;;
+border-radius: 8px;
+width: 100%;
+}
+.mantine-TextInput-rightSection {
+ 
+  width: 100%;
+}
+.mantine-TextInput-input{
+  border: 0px solid #4fc3b1;; 
+  width: 100%;
+}
+.mantine-Textarea-wrapper{
+  background: #FFFFFF;
+border: .2rem solid #C6F0EB;;
+height: 113px;
+border-radius: 8px;
+width: 100%;
+}
+.mantine-Textarea-input{
+  border: 0px solid #C5EEE9; 
+}
+
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+  transition-delay: 3s;
+}
+.MuiOutlinedInput-input{
+  border: 0rem solid #C6F0EB
+}
+.MuiTextField-root{
+  border: 0.2rem solid #C6F0EB;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  height: 47px; 
+  background: #FFFFFF;
+  border: 3px solid #C6F0EB;
+  border-radius: 8px;
+}
+	.mantine-Drawer-drawer{
+  background: #01121C;
 }
