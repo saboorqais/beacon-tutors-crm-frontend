@@ -24,6 +24,9 @@ Install my-project with npm
 ![Logo](https://user-images.githubusercontent.com/62180086/229376366-1232eeb6-da92-4d2c-a678-0452acd00922.jpg)
 
 
+
+
+
 ## Screenshots
 ![loadingState](https://user-images.githubusercontent.com/62180086/229376418-58195b05-1c9e-4fae-a914-f4c252f6f65e.png)
 ![AddInquiry Page](https://user-images.githubusercontent.com/62180086/229376476-3ce4d819-9e4a-443d-869e-21f2118f0590.png)
@@ -36,3 +39,5 @@ Install my-project with npm
 ![MobileView](https://user-images.githubusercontent.com/62180086/229376513-9d6a9fb0-4bdb-4cff-8322-0b5ae48d1bdc.png)
 
 
+
+https://user-images.githubusercontent.com/62180086/229475928-83588623-88aa-4353-b47c-b8f839397074.mp4
