@@ -28,16 +28,23 @@ Install my-project with npm
 
 
 ## Screenshots
+## Loading Screen Page
 ![loadingState](https://user-images.githubusercontent.com/62180086/229376418-58195b05-1c9e-4fae-a914-f4c252f6f65e.png)
+## Inquiry Add Page
 ![AddInquiry Page](https://user-images.githubusercontent.com/62180086/229376476-3ce4d819-9e4a-443d-869e-21f2118f0590.png)
+## Drawer Page
 ![Drawer](https://user-images.githubusercontent.com/62180086/229376480-6aedfef6-a67f-4c55-a1ea-0229a69d4e0f.png)
+## Home Page
 ![homepage](https://user-images.githubusercontent.com/62180086/229376483-186566c2-80aa-4a22-bc6e-5bd7f5ea8666.png)
+## Inquiry Details Page
 ![inquiryDetails](https://user-images.githubusercontent.com/62180086/229376485-6369d404-f241-41af-9f7a-a5c1ee583f91.png)
+## Inquiry Page
 ![inquirypage](https://user-images.githubusercontent.com/62180086/229376496-ab1b4c48-a0a1-47f4-924f-aea86d5e51d5.png)
-![loadingState](https://user-images.githubusercontent.com/62180086/229376499-4a707f90-1758-40f7-9987-3b4c414d7522.png)
+## Mobile View Page
 ![Mobile View Homepage](https://user-images.githubusercontent.com/62180086/229376503-822aca9a-1bbc-4916-b0a7-072c16271b38.png)
+## Mobile View Page
 ![MobileView](https://user-images.githubusercontent.com/62180086/229376513-9d6a9fb0-4bdb-4cff-8322-0b5ae48d1bdc.png)
 
-
+## Video of Inquiry Deletion
 
 https://user-images.githubusercontent.com/62180086/229475928-83588623-88aa-4353-b47c-b8f839397074.mp4
