@@ -22,7 +22,6 @@ function MainContainer({ selectedSubSection, selectedSection }) {
     dispatch(getAllInquiries(PageState));
   }, [PageState]);
 
-
   return (
     <div className={styles.MainContainer}>
       <div className={styles.HeadingContainer}>
@@ -45,9 +44,7 @@ function MainContainer({ selectedSubSection, selectedSection }) {
         </div>
       </div>
       {router.asPath === "/addInquiry" ? (
-        
-          <Addform />
-        
+        <Addform />
       ) : (
         <>
           <FieldContainer />
