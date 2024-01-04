@@ -15,6 +15,8 @@ Install my-project with npm
   npm install my-project
   cd my-project
 ```
+> [!NOTE]  
+> This is only Front End Application and has dummy Data The code for ASYNC Task Is commented out and can be added
     
 
 # 💻 Tech Stack:
