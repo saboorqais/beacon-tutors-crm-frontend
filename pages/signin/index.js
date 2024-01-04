@@ -9,8 +9,8 @@ import toast from "react-hot-toast";
 function SignIn(props) {
   const router = useRouter();
   const [user, setUser] = useState(null);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("devs.testing.01@Gmail.com");
+  const [password, setPassword] = useState("Admin123*");
   const [inputType, setInputType] = useState("password");
   const [isDisabled, setIsDisabled] = useState(false);
 
