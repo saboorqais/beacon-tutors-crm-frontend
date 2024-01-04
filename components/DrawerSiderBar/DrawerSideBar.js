@@ -42,9 +42,9 @@ function DrawerSiderBar(props) {
 
 
           }}>
-          {AllList[TabState][0]?.map((item) => {
+            {console.log(AllList,TabState)}
+          {TabState >=0 &&AllList[TabState][0]?.map((item) => {
             
-            { console.log(TabState) }
             return <div 
             style={{
               display: "flex",

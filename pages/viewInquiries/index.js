@@ -1,12 +1,9 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import Layout from "../../components/Layouts/Layout";
+import React from 'react';
+import Layout from "../../components/Layout/Layout.js";
 import MainContainer from '../../components/MainContainer/MainContainer';
-import { getAllInquiries } from '../../components/Reducers/Inquiries';
 
 function ViewInquiries(props) {
   
-    
     return (
         <div><MainContainer/></div>
     );

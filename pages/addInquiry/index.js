@@ -1,5 +1,4 @@
-import { MantineProvider } from '@mantine/core';
-import { NotificationsProvider } from '@mantine/notifications';
+
 import React from 'react';
 import Layout from "../../components/Layout/Layout";
 import MainContainer from '../../components/MainContainer/MainContainer';

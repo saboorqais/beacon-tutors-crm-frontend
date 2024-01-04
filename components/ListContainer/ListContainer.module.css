@@ -1,7 +1,7 @@
 .ListContainer {
   flex:2;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-y: scroll;
+  overflow-x: scroll;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -17,8 +17,16 @@
     min-height: 76px;
   }
 }
+.ListContainer::-webkit-scrollbar {
+  width: 4px; /* Adjust the width of the scrollbar */
+  height: 1px;
+  background-color: #384f76;
+}
 @media only screen and  (max-width:430px){
     .Container {
+        display: none;
+      }
+      .ListContainer{
         display: none;
       }
 }

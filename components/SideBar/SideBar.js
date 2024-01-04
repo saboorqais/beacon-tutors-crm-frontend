@@ -1,17 +1,16 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { selectCloseState } from '../Reducers/CloseState'
-import styles from '../SideBar/SideBar.module.css'
 import SideBarMenu from '../SideBarMenu/SideBarMenu'
 import {
   ChevronsLeft,
   Settings,
   LogOut,
-} from "lucide-react";
+} from "lucide-react"
 import ListContainer from '../ListContainer/ListContainer'
-import { Drawer } from '@mantine/core'
 import DrawerSiderBar from '../DrawerSiderBar/DrawerSideBar'
 import { useRouter } from 'next/router'
+import styles from '../SideBar/sidebar.module.css'
 function SideBar() {
   const CloseState = useSelector(selectCloseState)
   const router = useRouter();

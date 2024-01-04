@@ -5,7 +5,6 @@ import { selectCloseState, setCloseState } from "../Reducers/CloseState";
 function SideBarMenu(props) {
   const CloseState = useSelector(selectCloseState);
   const dispatch = useDispatch();
-  console.log(CloseState);
   return (
     <div
       className={` ${props.action
@@ -14,7 +13,7 @@ function SideBarMenu(props) {
         }`}
     >
       <div
-        className={styles.ChevronsLeft}
+        className={ CloseState ?styles.ChevronsLeft : styles.rotateRight}
         onClick={() => {
           props.action === "Action" ? "" :
             dispatch(setCloseState(!CloseState))

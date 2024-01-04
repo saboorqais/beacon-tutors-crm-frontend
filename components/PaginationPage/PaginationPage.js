@@ -41,10 +41,11 @@ export default function PaginationPage({}) {
   useEffect(() => {
    
     console.log("USeEffect")
-    const request = GetTotal();
-    request.then((res) => {
-      settotal(res.data.length);
-    });
+    // const request = GetTotal();
+    // request.then((res) => {
+    //   settotal(res.data.length);
+    // });
+    settotal(Inquiries.length);
   }, [Inquiries, PageState,pagination.range]);
 
  
